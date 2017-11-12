@@ -42,7 +42,6 @@ html {
 
 /* ok,美化一下我们的工作区 */
 .style-div {
-  top: 1vh;
   padding: 10px 10px 20px;
   overflow: auto;
   background: rgb(48, 48, 48);
@@ -54,6 +53,10 @@ html {
   box-shadow: -4px 4px 2px 0 rgba(0,0,0,0.3);
 }
 
+.style-div:hover {
+  box-shadow: 0px 0px 40px 5px rgba(255,255,255,0.4);
+}
+
 /* 代码看着不舒服,加个高亮 */
 .token.comment{ color: #857F6B; font-style: italic; }
 .token.selector{ color: #E69F0F }
@@ -61,12 +64,11 @@ html {
 .token.punctuation{ color: #ddd; }
 .token.function{ color: #BE84F2; }
 
+/* 加一些3D转换效果 */
 .style-div {
-  position: fixed; left: 0; top: 0;
-  -webkit-transition: none;
-  transition: none;
+  position: fixed; left: 10px; top: 10px;
+  transform: rotateY(10deg) translateZ(-100px) ;
   -webkit-transform: rotateY(10deg) translateZ(-100px) ;
-          transform: rotateY(10deg) translateZ(-100px) ;
 }
 
 /* 改变一下可视角度 */
@@ -127,34 +129,33 @@ html{
 }
 `],
         currentMarkdown: '',
-        fullMarkdown: `方应杭
+        fullMarkdown: `甄怀修
 ----
 
-资深前端工程师，资深前端讲师，现在在 [饥人谷](http://jirengu.com) 教前端课程。
+PHP,MYSQL,LINUX工程师
 
 技能
 ----
 
-* 前端开发
+* php
 * Rails 开发
 * Node.js 开发
-* 前端授课
+* linux
 
 工作经历
 ----
 
-1. [饥人谷](http://jirengu.com)
-2. 腾讯即时通讯平台部
-3. 阿里巴巴B2B部门
-4. 彩程知人项目组
+1.
+2.
+3.
+4.
 
 链接
 ----
 
-* [GitHub](https://github.com/frankfang)
-* [我的文章](https://www.zhihu.com/people/zhihusucks/pins/posts)
+* [GitHub](https://github.com/shyZhen)
+* [我的博客](https://www.litblc.com)
 
-> 如果你喜欢这个效果，Fork [我的项目](https://github.com/jirengu-inc/animating-resume)，打造你自己的简历！
 
 `
       }
