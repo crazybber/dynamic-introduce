@@ -34,26 +34,34 @@
   transition: all 1s;
   -webkit-transition: all 1s;
 }
+
 /* 白色背景太刺眼,换一个原谅绿*/
 html {
-  color: rgba(106, 115, 125);
   background: rgba(101, 234, 45, 0.59);
 }
-/* 好像文字离边框太近了 */
-.style-div {
-  padding: 1em;
-  border: 1px solid;
-  margin: 1em;
-  overflow: auto;
-  width: 45vw; height: 90vh;
-}
-/* 代码看着不舒服,加个高亮 */
-.token.selector{ color: #5564d8; }
-.token.property{ color: rgb(187,137,0); }
-.token.punctuation{ color: #ef20b7; }
-.token.function{ color: rgb(42,161,152); }
 
-.styleEditor {
+/* ok,美化一下我们的工作区 */
+.style-div {
+  top: 1vh;
+  padding: 10px 10px 20px;
+  overflow: auto;
+  background: rgb(48, 48, 48);
+  color: white;
+  border: 1px solid #ccc;
+  width: 45vw;
+  height: 90vh;
+  font-size: 14px;
+  box-shadow: -4px 4px 2px 0 rgba(0,0,0,0.3);
+}
+
+/* 代码看着不舒服,加个高亮 */
+.token.comment{ color: #857F6B; font-style: italic; }
+.token.selector{ color: #E69F0F }
+.token.property{ color: #64D5EA; }
+.token.punctuation{ color: #ddd; }
+.token.function{ color: #BE84F2; }
+
+.style-div {
   position: fixed; left: 0; top: 0;
   -webkit-transition: none;
   transition: none;
@@ -68,7 +76,7 @@ html{
 }
 
 /* 接下来我给自己准备一个编辑器 */
-.resumeEditor{
+.resume-div{
   position: fixed; right: 0; top: 0;
   padding: .5em;  margin: .5em;
   width: 48vw; height: 90vh;
@@ -89,30 +97,30 @@ html{
           ,
           `
 /* 再对 HTML 加点样式 */
-.resumeEditor{
+.resume-div{
   padding: 2em;
 }
-.resumeEditor h2{
+.resume-div h2{
   display: inline-block;
   border-bottom: 1px solid;
   margin: 1em 0 .5em;
 }
-.resumeEditor ul,.resumeEditor ol{
+.resume-div ul,.resume-div ol{
   list-style: none;
 }
-.resumeEditor ul> li::before{
+.resume-div ul> li::before{
   content: '•';
   margin-right: .5em;
 }
-.resumeEditor ol {
+.resume-div ol {
   counter-reset: section;
 }
-.resumeEditor ol li::before {
+.resume-div ol li::before {
   counter-increment: section;
   content: counters(section, ".") " ";
   margin-right: .5em;
 }
-.resumeEditor blockquote {
+.resume-div blockquote {
   margin: 1em;
   padding: .5em;
   background: #ddd;
