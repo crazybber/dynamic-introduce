@@ -1,6 +1,5 @@
 # 一个会动的简历模板
 
-forked from jirengu-inc/animating-resume
 
 
 ## 使用方法
