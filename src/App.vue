@@ -23,44 +23,48 @@
         enableHtml: false,
         fullStyle: [
           `/*
-* Inspired by http://strml.net/
-* 大家好，我是方方
-* 二月了，好多公司都在招聘，你是不是也在准备简历呀。
-* 说做就做，我也来写一份简历！
+* Everybody yo yo ,come let's go !
+* 大家好,我是甄怀修,一个要成为网红的程序员
+* 喜欢前端的PHP后端工程师
+* 下面我来写个页面简单介绍一下自己
 */
 
 /* 首先给所有元素加上过渡效果 */
 * {
-  transition: all .3s;
+  transition: all 1s;
+  -webkit-transition: all 1s;
 }
-/* 白色背景太单调了，我们来点背景 */
+/* 白色背景太刺眼,换一个原谅绿*/
 html {
-  color: rgb(222,222,222); background: rgb(0,43,54);
+  color: rgba(106, 115, 125);
+  background: rgba(101, 234, 45, 0.59);
 }
-/* 文字离边框太近了 */
-.styleEditor {
-  padding: .5em;
+/* 好像文字离边框太近了 */
+.style-div {
+  padding: 1em;
   border: 1px solid;
-  margin: .5em;
+  margin: 1em;
   overflow: auto;
   width: 45vw; height: 90vh;
 }
-/* 代码高亮 */
-.token.selector{ color: rgb(133,153,0); }
+/* 代码看着不舒服,加个高亮 */
+.token.selector{ color: #5564d8; }
 .token.property{ color: rgb(187,137,0); }
-.token.punctuation{ color: yellow; }
+.token.punctuation{ color: #ef20b7; }
 .token.function{ color: rgb(42,161,152); }
 
-/* 加点 3D 效果呗 */
-html{
-  perspective: 1000px;
-}
 .styleEditor {
   position: fixed; left: 0; top: 0;
   -webkit-transition: none;
   transition: none;
   -webkit-transform: rotateY(10deg) translateZ(-100px) ;
           transform: rotateY(10deg) translateZ(-100px) ;
+}
+
+/* 改变一下可视角度 */
+html{
+  perspective: 1500px;
+  -webkit-perspective: 1500px; /* Safari 和 Chrome */
 }
 
 /* 接下来我给自己准备一个编辑器 */
