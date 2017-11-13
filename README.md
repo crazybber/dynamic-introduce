@@ -2,12 +2,23 @@
 
 ## 使用方法
 
-``` bash
+### 安装必要的包
+```
 npm install
+```
+### 修改目标文件
+```
+/src/App.vue
+/src/Mobile.vue
+```
+
+### 开发测试
+``` bash
 npm run dev
 ```
 
-## 部署方法
+
+## build
 
 ``` bash
 npm run build
