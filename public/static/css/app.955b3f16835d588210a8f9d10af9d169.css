@@ -44,7 +44,6 @@ to {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  min-height: 100vh; position: relative;
 }
 html[data-v-b76f4cbc] {
   min-height: 100vh;
@@ -53,5 +52,4 @@ html[data-v-b76f4cbc] {
   box-sizing: border-box;
 }
 
-
-/*# sourceMappingURL=app.c621eefefd07131600acad2fcbee2d4f.css.map*/
+/*# sourceMappingURL=app.955b3f16835d588210a8f9d10af9d169.css.map*/
