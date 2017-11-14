@@ -42,6 +42,7 @@
  */
 html {
   background: rgba(101, 234, 45, 0.59);
+  height:100%; width:100%;
   /* Emmm.. It doesn't seem to fit me */
   background: rgb(63, 82, 99);
 }
@@ -55,8 +56,8 @@ html {
   background: rgb(48, 48, 48);
   color: white;
   border: 1px solid #ccc;
-  width: 45vw;
-  height: 90vh;
+  width: 45%;
+  height: 90%;
   font-size: 14px;
   box-shadow: -4px 4px 2px 0 rgba(0,0,0,0.3);
 }
@@ -96,7 +97,7 @@ html {
 .resume-div {
   position: fixed; right: 10px; top: 10px;
   padding: 10px; margin: 10px;
-  width: 48vw; height: 90vh;
+  width: 48%; height: 90%;
   border: 1px solid;
   background: white; color: #222;
   overflow: auto;
@@ -160,7 +161,6 @@ html {
 - PHP 开发工程师 / 深圳;
 - 喜欢探索新技术 / 自学PHP已达四年时间
 
-
 ## 技能
 ----
 
@@ -175,15 +175,12 @@ html {
 - 深圳市天英联合教育股份有限公司  南山智园 2017/06 - 至今
 - 深圳市蓝网科技股份有限公司  南山智园 2016/09 - 2017/06
 
-
 ## 链接
 ----
 
 * [个人导航|HTML5](http://phpb.io)
 * [GitHub|shyZhen](https://github.com/shyZhen)
 * [我的博客|全站SSL全球CDN七牛静态资源分发](https://www.litblc.com)
-
-
 `
       }
     },
@@ -264,7 +261,7 @@ html {
   }
 
   html {
-    min-height: 100vh;
+    min-height: 100%;
   }
   *{
     box-sizing: border-box;

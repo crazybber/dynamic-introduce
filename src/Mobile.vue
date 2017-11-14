@@ -42,7 +42,8 @@
  */
 html {
   background: rgba(101, 234, 45, 0.59);
-  /* Emmm.. It doesn't seem to fit me */
+  height:100%; width:100%;
+          /* Emmm.. It doesn't seem to fit me */
   background: rgb(63, 82, 99);
 }
 
@@ -55,8 +56,8 @@ html {
   background: rgb(48, 48, 48);
   color: white;
   border: 1px solid #ccc;
-  width: 95vw;
-  height: 90vh;
+  width: 95%;
+  height: 90%;
   font-size: 14px;
   box-shadow: -4px 4px 2px 0 rgba(0,0,0,0.3);
 }
@@ -94,10 +95,10 @@ html {
  * Okey,我还需要一个填充内容的容器
  */
 .resume-div {
-  position: fixed; right: 10px; top: 50%;
+  position: fixed; right: 10px; top: 10px; z-index: 9999;
   padding: 10px; margin: 10px;
-  width: 100vw;
-  height: 70vh;
+  width: 90%;
+  height: 70%;
   border: 1px solid;
   background: white; color: #222;
   overflow: auto;
@@ -177,15 +178,12 @@ html {
 - 深圳市天英联合教育股份有限公司  南山智园 2017/06 - 至今
 - 深圳市蓝网科技股份有限公司  南山智园 2016/09 - 2017/06
 
-
 ## 链接
 ----
 
 * [个人导航|HTML5](http://phpb.io)
 * [GitHub|shyZhen](https://github.com/shyZhen)
 * [我的博客|全站SSL全球CDN七牛静态资源分发](https://www.litblc.com)
-
-
   `
   }
   },
@@ -266,7 +264,7 @@ html {
   }
 
   html {
-    min-height: 100vh;
+    min-height: 100%;
   }
   *{
     box-sizing: border-box;

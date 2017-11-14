@@ -5,7 +5,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 html[data-v-288975d1] {
-  min-height: 100vh;
+  min-height: 100%;
 }
 *[data-v-288975d1]{
   box-sizing: border-box;
@@ -46,10 +46,10 @@ to {
   -moz-osx-font-smoothing: grayscale;
 }
 html[data-v-b76f4cbc] {
-  min-height: 100vh;
+  min-height: 100%;
 }
 *[data-v-b76f4cbc]{
   box-sizing: border-box;
 }
 
-/*# sourceMappingURL=app.955b3f16835d588210a8f9d10af9d169.css.map*/
+/*# sourceMappingURL=app.425b034ebb60e0ef6193d2e493d28afb.css.map*/
