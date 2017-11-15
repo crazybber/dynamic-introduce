@@ -118,7 +118,10 @@ html {
 `
 ,
 `
-/* 再对 HTML 加点样式 */
+/**
+ * 我现在竟然感觉Markdown格式更好看
+ * 对 HTML 加点样式
+ */
 .resume-div {
   padding: 10px;
 }
@@ -137,10 +140,9 @@ html {
 .resume-div ul> li {
    margin: 10px;
 }
-.resume-div ol {
-  counter-reset: section;
-}
-/** OK,还有最后一句话
+
+/**
+ * OK,还有最后一句话
  * PHP是世界上最好的语言
  */
 `],
