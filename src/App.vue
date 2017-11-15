@@ -99,7 +99,7 @@ html {
   padding: 10px; margin: 10px;
   width: 48%; height: 90%;
   border: 1px solid;
-  background: white; color: #222;
+  background: rgb(48, 48, 48); color: white;
   overflow: auto;
   transform: rotateY(-10deg) translateZ(-100px);
   -webkit-transform: rotateY(-10deg) translateZ(-100px);
@@ -122,9 +122,9 @@ html {
  * 我现在竟然感觉Markdown格式更好看
  * 对 HTML 加点样式
  */
-.resume-div {
-  padding: 10px;
-}
+.resume-div a {
+      color: wheat;
+  }
 .resume-div h2 {
   display: inline-block;
   border-bottom: 1px solid;
@@ -138,7 +138,7 @@ html {
   margin-right: 10px;
 }
 .resume-div ul> li {
-   margin: 10px;
+   margin: 6px;
 }
 
 /**
@@ -268,4 +268,5 @@ html {
   *{
     box-sizing: border-box;
   }
+
 </style>
