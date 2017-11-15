@@ -139,7 +139,7 @@ html {
     margin-right: 10px;
   }
 .resume-div ul> li {
-    margin: 6px;
+    margin: 8px;
   }
 
 /**
