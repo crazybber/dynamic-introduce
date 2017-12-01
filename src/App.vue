@@ -180,7 +180,7 @@ html {
 ## 链接
 ----
 
-* [个人导航|HTML5](http://phpb.io)
+* [个人导航|HTML5](http://litblc.com)
 * [GitHub|shyZhen](https://github.com/shyZhen)
 * [我的博客|全站SSL全球CDN七牛静态资源分发](https://www.litblc.com)
 `
