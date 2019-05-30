@@ -167,6 +167,7 @@ html{
       },
       progressivelyShowStyle(n) {
         return new Promise((resolve, reject) => {
+          debugger
           let interval = this.interval
           let showStyle = (async function () {
             let style = this.fullStyle[n]

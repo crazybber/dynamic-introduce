@@ -18,7 +18,7 @@
     },
     data() {
       return {
-        interval: 40,
+        interval: 4,
         currentStyle: '',
         enableHtml: false,
         fullStyle: [
@@ -48,10 +48,6 @@ html {
   margin: 2.5vh 5vw;
   height: 90vh;
 }
-/* 太高了 */
-.styleEditor {
-  height: 45vh;
-}
 /* 代码高亮 */
 .token.selector{
   color: rgb(133,153,0);
@@ -66,21 +62,26 @@ html {
   color: rgb(42,161,152);
 }
 
+/* 太高了 */
+.styleEditor {
+  height: 20vh;
+}
+
 /* 加点 3D 效果呗 */
 html{
   perspective: 1000px;
 }
 .styleEditor {
   position: fixed; left: 0; top: 0;
-  transform: rotateX(-10deg) translateZ(-50px) ;
+  transform: rotateX(-30deg) translateZ(0px) ;
 }
 
 /* 接下来我给自己准备一个编辑器 */
 .resumeEditor{
   position: fixed;
-  top: 50%; left: 0;
-  padding: .5em;  margin: 2.5vh;
-  width: 95vw; height: 45vh;
+  top: 21%; left: 0;
+  padding: .5em;  margin: 3vh;
+  width: 90vw; height: 72vh;
   border: 1px solid;
   background: white; color: #222;
   overflow: auto;
