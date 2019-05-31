@@ -165,7 +165,7 @@ html{
   margin-top: 10px;
 }
 
-/* 好了，认真看一下学院介绍吧！*/
+/* 好了,认真看一下学院介绍吧！*/
 
 * {
   transition: all 1s;
@@ -224,8 +224,8 @@ html{
 省优秀教学成果二等奖、
 中国学位与研究生教育学会二等奖、
 全国高等学校计算机实践教学一等奖各1项。
-![计算机学院本科教学与人才培养](https://static.myseu.cn/2019-xueyuantuisong/计算机学院本科教学与人才培养.jpg)
-<p style="text-align:center;font-weight:bold;font-size:14px;">计算机学院本科教学与人才培养</p>
+![计算机学院本科教学与人才培养模式](https://static.myseu.cn/2019-xueyuantuisong/计算机学院本科教学与人才培养.jpg)
+<p style="text-align:center;font-weight:bold;font-size:14px;">计算机学院本科教学与人才培养模式</p>
 “计算机教学实验中心”是
 国家及江苏省教学实验示范中心建设点,
 “数据库原理共享课”为国家级精品课程。
@@ -361,6 +361,12 @@ html{
 <p style="text-align:center;font-weight:bold;font-size:14px;">“我爱东大”校史校情知识竞赛</p>
 ![环九龙湖自行车赛](https://static.myseu.cn/2019-xueyuantuisong/tp3.jpg)
 <p style="text-align:center;font-weight:bold;font-size:14px;">环九龙湖自行车赛</p>
+
+敏于思,笃于行。
+计算机的世界,充满各种未知的组合,这里有放飞梦想的舞台,
+有实现抱负的沃土。你可以用算法改变世界,
+也可以用代码创造未来。
+计算机一流学科的建设,需要有你！
 `
       }
     },
