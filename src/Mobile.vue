@@ -48,13 +48,7 @@ html {
 body{
   background: rgb(0,43,54);
 }
-.background{
-  position:fixed;
-  left:0;
-  top:0;
-  height:100vh; width:100vh;
-  background: rgb(0,43,54);
-}
+
 /* 调整一下代码框的位置 */
 .styleEditor {
   padding: .5em;
@@ -185,13 +179,26 @@ html{
 
 /* 好了，认真看一下学院介绍吧！*/
 
+* {
+  transition: all 1s;
+}
 .styleEditor {
   opacity:0;
 }
 .resumeEditor {
   top:0;
   height:95vh;
+  z-index:10;
 }
+.background{
+  position:fixed;
+  left:0;
+  top:0;
+  height:100vh; width:100vh;
+  background: rgb(0,43,54);
+  z-index:-10;
+}
+
 
 
 
