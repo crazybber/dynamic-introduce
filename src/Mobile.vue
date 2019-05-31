@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <div class="background"></div>
     <StyleEditor ref="styleEditor" :code="currentStyle"></StyleEditor>
     <ResumeEditor ref="resumeEditor" :markdown="currentMarkdown" :enableHtml="enableHtml"></ResumeEditor>
   </div>
@@ -45,6 +46,14 @@ html {
   overflow: hidden;
 }
 body{
+  background: rgb(0,43,54);
+}
+.background{
+  z-index:-1;
+  position:fixed;
+  left:0;
+  top:0;
+  height:100vh; width:100vh;
   background: rgb(0,43,54);
 }
 /* 调整一下代码框的位置 */
