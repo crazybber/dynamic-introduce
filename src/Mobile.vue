@@ -49,7 +49,6 @@ body{
   background: rgb(0,43,54);
 }
 .background{
-  z-index:-10000;
   position:fixed;
   left:0;
   top:0;
