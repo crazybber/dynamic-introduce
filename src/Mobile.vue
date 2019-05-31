@@ -18,7 +18,7 @@
     },
     data() {
       return {
-        interval: 30,
+        interval: 40,
         currentStyle: '',
         enableHtml: false,
         fullStyle: [
@@ -203,9 +203,15 @@ html{
 省优秀教学成果二等奖、
 中国学位与研究生教育学会二等奖、
 全国高等学校计算机实践教学一等奖各1项。
+![计算机学院本科教学与人才培养](https://static.myseu.cn/2019-xueyuantuisong/计算机学院本科教学与人才培养.jpg)
+<p style="text-align:center;font-weight:bold;font-size:14px;">计算机学院本科教学与人才培养</p>
 “计算机教学实验中心”是
 国家及江苏省教学实验示范中心建设点,
 “数据库原理共享课”为国家级精品课程。
+![东南大学计算机科学与技术一级学科博士学位授权点](https://static.myseu.cn/2019-xueyuantuisong/东南大学计算机科学与技术一级学科博士学位授权点.jpg)
+<p style="text-align:center;font-weight:bold;font-size:14px;">计算机科学与技术一级学科博士学位授权点</p>
+![东南大学计算机科学与技术一级学科博士后流动站](https://static.myseu.cn/2019-xueyuantuisong/东南大学计算机科学与技术一级学科博士后流动站.jpg)
+<p style="text-align:center;font-weight:bold;font-size:14px;">计算机科学与技术一级学科博士后流动站</p>
 
 ## 软件学院简介
 学院成立于2001年12月,
@@ -221,6 +227,8 @@ html{
 学院始终以**现代工程教育**的理念为指引
 建立创新人才培养模式,
 并成为学校**工程教育教学改革**的先行者。
+![国家示范性软件学院](https://static.myseu.cn/2019-xueyuantuisong/国家示范性软件学院.jpg)
+<p style="text-align:center;font-weight:bold;font-size:14px;">国家示范性软件学院</p>
 
 ## 人工智能学院简介
 学院以计算机科学与工程学院为基础,
@@ -244,11 +252,17 @@ html{
 教学质量、
 人才培养等方面建设国内外
 具有**明显特色**和**较高学术水平**的人工智能专业。
+![人工智能学院、人工智能研究院](https://static.myseu.cn/2019-xueyuantuisong/人工智能学院、人工智能研究院.jpg)
+<p style="text-align:center;font-weight:bold;font-size:14px;">人工智能学院、人工智能研究院</p>
+![江苏省人工智能学会副理事长单位](https://static.myseu.cn/2019-xueyuantuisong/江苏省人工智能学会副理事长单位.jpg)
+<p style="text-align:center;font-weight:bold;font-size:14px;">江苏省人工智能学会副理事长单位</p>
 
 ## 师资队伍
 学院现有专任教师93人,
 拥有一支**结构合理、充满朝气、
-以中青年教师为主的**高水平师资队伍。其中,
+以中青年教师为主的**高水平师资队伍。
+其中,
+
 * 中国工程院院士 **1** 人
 * 博士生导师 **22** 人
 * 新世纪“百千万人才工程”国家级人选 **1** 人
@@ -266,6 +280,35 @@ html{
 * 江苏省“双创博士”资助对象 **3** 人
 * “长江学者和创新团队发展计划”创新团队 **1** 个
 
+![计算机学院师资队伍](https://static.myseu.cn/2019-xueyuantuisong/计算机学院师资队伍.jpg)
+<p style="text-align:center;font-weight:bold;font-size:14px;">计算机学院师资队伍</p>
+
+## 国际交流
+
+学院坚持走国际化办学的强院道路,
+积极拓宽国际视野、增强国际理念、加强国际交流、深化国际合作,
+在高层次国际交流、与国际知名大学合作办学等方面实现了重要突破。
+
+![承办第15届亚太人工智能国际会议](https://static.myseu.cn/2019-xueyuantuisong/承办第15届亚太人工智能国际会议.jpg)
+<p style="text-align:center;font-weight:bold;font-size:14px;">承办第15届亚太人工智能国际会议</p>
+![承办第22届CSCWD国际会议](https://static.myseu.cn/2019-xueyuantuisong/承办第22届CSCWD国际会议.jpg)
+<p style="text-align:center;font-weight:bold;font-size:14px;">承办第22届CSCWD国际会议</p>
+
+近年来,教学计划中逐步增加外教、全英文、双语授课课程,
+为学生创造国际化的学习环境,为培养适应国际合作与竞争背景的优秀人才提供了有力保障。
+2011年,开始与澳大利亚Monash大学联合培养软件工程硕士,
+邀请了来自美国、德国、荷兰和加拿大等国家的知名学者来学院讲学,
+接待了来自美国 Carnegie Mellon大学、Temple大学、肯特州立大学、
+爱沙尼亚塔尔图大学、德国乌尔姆大学、澳大利亚Monash大学、
+法国巴黎高科、英国女王大学代表团来访,并洽谈了合作事宜。
+与美国普渡大学、爱尔兰阿斯隆理工学院、
+爱尔兰考德大学、日本早稻田大学、澳大利亚昆士兰大学、
+比利时 GROUP-T大学、爱尔兰 Ericsson公司等签署了合作协议联合培养学生,
+每年均有一定比例的学生到上述大学和企业进行研究和实习,
+培养了一批具有国际竞争能力的精英型计算机、软件人才。
+
+
+
 ## 学生活动
 
 学院非常重视第二课堂的建设,在院团委的指导下,
@@ -273,6 +316,10 @@ html{
 四大学生组织,每年将举办大大小小数十场活动,
 极大地丰富着同学们的课余生活。
 
+![获ICPC（国际大学生程序设计竞赛）亚洲区域赛金牌](https://static.myseu.cn/2019-xueyuantuisong/获ICPC（国际大学生程序设计竞赛）亚洲区域赛金牌.jpg)
+<p style="text-align:center;font-weight:bold;font-size:14px;">获ICPC（国际大学生程序设计竞赛）亚洲区域赛金牌</p>
+![获全国高校云计算应用创新大赛一等奖](https://static.myseu.cn/2019-xueyuantuisong/获全国高校云计算应用创新大赛一等奖.jpg)
+<p style="text-align:center;font-weight:bold;font-size:14px;">获全国高校云计算应用创新大赛一等奖</p>
 ![院运会](https://static.myseu.cn/2019-xueyuantuisong/tp1.jpg)
 <p style="text-align:center;font-weight:bold;font-size:14px;">院运会</p>
 ![中山陵志愿者活动](https://static.myseu.cn/2019-xueyuantuisong/tp2.png)
@@ -291,8 +338,9 @@ html{
     methods: {
       makeResume: async function () {
         await this.progressivelyShowStyle(0)
+        this.interval = 0
         await this.progressivelyShowResume()
-        this.interval = 10
+        this.interval = 20
         await this.progressivelyShowStyle(1)
         await this.showHtml()
         await this.progressivelyShowStyle(2)
@@ -344,7 +392,7 @@ html{
               if (prevChar === '\n' && this.$refs.resumeEditor) {
                 this.$nextTick(() => this.$refs.resumeEditor.goBottom())
               }
-              setTimeout(showResume, interval)
+              showResume()
             } else {
               resolve()
             }
