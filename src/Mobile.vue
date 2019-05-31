@@ -165,6 +165,10 @@ html{
   margin-top: 10px;
 }
 
+hr {
+  margin:20px 0;
+}
+
 /* 好了,认真看一下学院介绍吧！*/
 
 * {
@@ -363,8 +367,9 @@ html{
 <p style="text-align:center;font-weight:bold;font-size:14px;">环九龙湖自行车赛</p>
 
 
-<p style="margin-top:10px"></p>
-**敏于思,笃于行。**
+----
+
+### 敏于思,笃于行。
 
 **计算机的世界,充满各种未知的组合,这里有放飞梦想的舞台,
 有实现抱负的沃土。你可以用算法改变世界,
