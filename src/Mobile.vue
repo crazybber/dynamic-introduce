@@ -64,6 +64,7 @@ body{
   width: 90vw;
   margin: 2.5vh 5vw;
   height: 90vh;
+
 }
 /* 代码高亮才不容易出错 */
 .token.selector{
@@ -89,6 +90,7 @@ html{
   perspective: 1000px;
 }
 .styleEditor {
+  z-index: 10000;
   position: fixed; left: 0; top: 0;
   transform: rotateX(-30deg) translateZ(0px) ;
 }
