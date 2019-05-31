@@ -130,7 +130,24 @@ html{
   color: #007419;
 }
 
-/* 文本小一些显得精致 */
+/* 文本需要精致的排版 */
+
+.resumeEditor li{ font-size: 15px;}
+.resumeEditor li strong{ color:#003174;}
+.resumeEditor ul,.resumeEditor ol{ list-style: none; }
+.resumeEditor ul> li::before{ content: '•'; margin-right: .5em; }
+.resumeEditor ol { counter-reset: section; }
+.resumeEditor ol li::before {
+  counter-increment: section;
+  content: counters(section, ".") " ";
+  margin-right: .5em;
+}
+.resumeEditor blockquote {
+  margin: 1em;
+  padding: .5em;
+  background: #ddd;
+}
+
 .resumeEditor p{
   font-size: 15px;
   margin-bottom: 0.5em;
@@ -146,35 +163,6 @@ html{
   border-radius: 5px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   margin-top: 10px;
-}
-
-.resumeEditor li{
-  font-size: 15px;
-}
-
-.resumeEditor li strong{
-  color:#003174;
-}
-
-.resumeEditor ul,.resumeEditor ol{
-  list-style: none;
-}
-.resumeEditor ul> li::before{
-  content: '•';
-  margin-right: .5em;
-}
-.resumeEditor ol {
-  counter-reset: section;
-}
-.resumeEditor ol li::before {
-  counter-increment: section;
-  content: counters(section, ".") " ";
-  margin-right: .5em;
-}
-.resumeEditor blockquote {
-  margin: 1em;
-  padding: .5em;
-  background: #ddd;
 }
 
 /* 好了，认真看一下学院介绍吧！*/
