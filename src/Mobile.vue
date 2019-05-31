@@ -18,7 +18,7 @@
     },
     data() {
       return {
-        interval: 2,
+        interval: 30,
         currentStyle: '',
         enableHtml: false,
         fullStyle: [
@@ -83,9 +83,10 @@ html{
 /* 接下来,正文就要登场了 */
 .resumeEditor{
   position: fixed;
-  top: 21%; left: 0;
-  padding: .5em;  margin: 3vh;
-  width: 90vw; height: 72vh;
+  top: 21%; left: 0; right: 0;
+  padding: .5em;  
+  margin: 20px;
+  height: 72vh;
   border: 1px solid;
   background: #FCFFDB; color: #222;
   overflow: auto;
@@ -105,7 +106,7 @@ html{
           `
 /* 格式还需要优化 */
 .resumeEditor{
-  padding: 2em;
+  padding: 20px 4vw;
 }
 
 /* 标题太大了 */

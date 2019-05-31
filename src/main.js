@@ -1,5 +1,4 @@
 import Vue from 'vue'
-import App from './App'
 import Mobile from './Mobile'
 
 var width = document.documentElement.clientWidth
