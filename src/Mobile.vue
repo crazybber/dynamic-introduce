@@ -42,6 +42,10 @@
 html {
   color: rgb(222,222,222);
   background: rgb(0,43,54);
+  overflow: hidden;
+}
+body{
+  background: rgb(0,43,54);
 }
 /* 调整一下代码框的位置 */
 .styleEditor {
@@ -168,6 +172,18 @@ html{
   padding: .5em;
   background: #ddd;
 }
+
+/* 好了，认真看一下学院介绍吧！*/
+
+.styleEditor {
+  opacity:0;
+}
+.resumeEditor {
+  top:0;
+  height:95vh;
+}
+
+
 
 `],
         currentMarkdown: '',
