@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <div class="background"></div>
     <StyleEditor ref="styleEditor" :code="currentStyle"></StyleEditor>
     <ResumeEditor ref="resumeEditor" :markdown="currentMarkdown" :enableHtml="enableHtml"></ResumeEditor>
   </div>
@@ -44,6 +43,12 @@ html {
   color: rgb(222,222,222);
   background: rgb(0,43,54);
   overflow: hidden;
+}
+html::before{
+  background: rgb(0,43,54);
+}
+html::after{
+  background: rgb(0,43,54);
 }
 body{
   background: rgb(0,43,54);
