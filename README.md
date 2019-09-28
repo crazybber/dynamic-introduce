@@ -2,7 +2,7 @@
 
 > This is a resume preiview
 
-[预览](https://crazybber.github.io/animating-resume/)
+[预览](https://crazybber.github.io/animating-resume/public)
 
 ## 使用方法
 
