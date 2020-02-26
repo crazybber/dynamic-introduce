@@ -38,13 +38,13 @@
 }
 
 /**
- * 白色背景太刺眼,换一个原谅绿
+ * 白色背景太刺眼,我们来点背景
  */
 html {
-  background: rgba(101, 234, 45, 0.59);
+ color: rgb(222,222,222);
   height:100%; width:100%;
   /* Emmm.. It doesn't seem to fit me */
-  background: rgb(63, 82, 99);
+  background: rgb(0,43,54);
 }
 
 /**
@@ -142,8 +142,8 @@ html {
 }
 
 /**
- * OK,还有最后一句话
- * PHP是世界上最好的语言
+ * OK,LAST WORDS
+ * I JUST USE OTHER'S STYLES
  */
 `],
         currentMarkdown: '',
@@ -166,7 +166,7 @@ html {
 ## 技能
 ----
 
-* LINUX|wINDOWS | GIT | NGINX | KUBERNETES
+* LINUX|WINDOWS | GIT | NGINX | KUBERNETES
 * ELASTICSEARCH | REDIS | KAFKA | DOCKER
 * COMPOSER | NPM | WEBPACK | GULP
 * PHP | MYSQL | LARAVEL | SYMFONY
