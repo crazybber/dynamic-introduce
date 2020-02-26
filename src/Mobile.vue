@@ -18,7 +18,7 @@
     },
     data() {
       return {
-        interval: 40,
+        interval: 20,
         currentStyle: '',
         enableHtml: false,
         fullStyle: [
@@ -38,7 +38,12 @@ html {
   color: rgb(222,222,222);
   background: rgb(0,43,54);
 }
-/* 文字离边框太近了 */
+
+body{
+  background: rgb(0,43,54);
+}
+
+/* 调整一下代码框的位置 */
 .styleEditor {
   padding: .5em;
   border: 1px solid;
@@ -84,12 +89,12 @@ html{
   background: white; color: #222;
   overflow: auto;
 }
-/* 好了，写点什么呢，呃....写个简历吧 */
+/* 好了，写点什么呢，那就随便写咯~ */
 
 
 `,
           `
-/* 这个简历好像差点什么
+/* 好像差点什么
  * 对了，这是 Markdown 格式的，我需要变成对 HR 更友好的格式
  * 简单，用开源工具翻译成 HTML 就行了
  */
