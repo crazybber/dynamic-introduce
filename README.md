@@ -28,5 +28,6 @@ npm run dev
     git push origin master
 ```
 
-3. 开启 GitHub Pages 功能
+4. 开启 GitHub Pages 功能
 
+setting中开启
