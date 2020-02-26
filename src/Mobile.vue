@@ -168,7 +168,9 @@ Fork [我的项目](https://github.com/crazybber/animating-resume)，打造你�
     methods: {
       makeResume: async function () {
         await this.progressivelyShowStyle(0)
+        this.interval = 0
         await this.progressivelyShowResume()
+        this.interval = 10
         await this.progressivelyShowStyle(1)
         await this.showHtml()
         await this.progressivelyShowStyle(2)
