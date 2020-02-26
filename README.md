@@ -20,12 +20,13 @@ npm run dev
 2. 修改访问端口，编辑：config/index.js，修改第26行。当前port: 80,
 
 3. 编译、上传
-    ``` bash
+
+```bash
     npm run build
     git add .
     git commit -m "update"
-    git push
-    ```
+    git push origin master
+```
 
 3. 开启 GitHub Pages 功能
 
