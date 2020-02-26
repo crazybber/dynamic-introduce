@@ -22,127 +22,169 @@
         currentStyle: '',
         enableHtml: false,
         fullStyle: [
-          `/*
-* Inspired by http://strml.net/
-* 大家好，我是路人甲
-* 玩前端这么久了，一直想做点有意思的东西，可能很多人已经做了...
-* 不说了，开搞！
+          `/**
+* Everybody yo yo ,come let's go !
+* 大家好，我是arch.run
+* this a demo just showing something.
+* let's go.
 */
 
-/* 首先给所有元素加上过渡效果 */
+/**
+ *  首先给所有元素加上过渡效果
+ */
 * {
-  transition: all .3s;
+  transition: all 1s;
+  -webkit-transition: all 1s;
 }
-/* 白色背景太单调了，我们来点背景 */
+
+/**
+ * 白色背景太刺眼,换一个原谅绿
+ */
 html {
-  color: rgb(222,222,222); background: rgb(0,43,54);
-}
-/* 文字离边框太近了 */
-.styleEditor {
-  padding: .5em;
-  border: 1px solid;
-  margin: .5em;
-  overflow: auto;
-  width: 45vw; height: 90vh;
-}
-/* 代码高亮 */
-.token.selector{ color: rgb(133,153,0); }
-.token.property{ color: rgb(187,137,0); }
-.token.punctuation{ color: yellow; }
-.token.function{ color: rgb(42,161,152); }
-
-/* 加点 3D 效果呗 */
-html{
-  perspective: 1000px;
-}
-.styleEditor {
-  position: fixed; left: 0; top: 0;
-  -webkit-transition: none;
-  transition: none;
-  -webkit-transform: rotateY(10deg) translateZ(-100px) ;
-          transform: rotateY(10deg) translateZ(-100px) ;
+  background: rgba(101, 234, 45, 0.59);
+  height:100%; width:100%;
+  /* Emmm.. It doesn't seem to fit me */
+  background: rgb(63, 82, 99);
 }
 
-/* 接下来我给自己准备一个编辑器 */
-.resumeEditor{
-  position: fixed; right: 0; top: 0;
-  padding: .5em;  margin: .5em;
-  width: 48vw; height: 90vh;
-  border: 1px solid;
-  background: white; color: #222;
+/**
+ * ok,美化一下我们的工作区
+ */
+.style-div {
+  padding: 10px 10px 20px;
   overflow: auto;
+  background: rgb(48, 48, 48);
+  color: white;
+  border: 1px solid #ccc;
+  width: 45%;
+  height: 90%;
+  font-size: 14px;
+  box-shadow: -4px 4px 2px 0 rgba(0,0,0,0.3);
 }
-/* 好了，写点什么呢，呃....写个简历吧 */
+.style-div:hover {
+  box-shadow: 0px 0px 40px 5px rgba(255,255,255,0.4);
+}
+
+/**
+ * 代码看着不舒服,加个高亮
+ */
+.token.comment { color: #857F6B; font-size: 12px; font-style: italic; }
+.token.selector { color: #E69F0F }
+.token.property { color: #64D5EA; }
+.token.punctuation { color: #ddd; }
+.token.function { color: #BE84F2; }
+
+/**
+ * 加一些3D转换效果
+ */
+.style-div {
+  position: fixed; left: 10px; top: 10px;
+  transform: rotateY(10deg) translateZ(-100px);
+  -webkit-transform: rotateY(10deg) translateZ(-100px);
+}
+
+/**
+ * 改变一下可视角度
+ */
+html {
+  perspective: 1500px;
+  -webkit-perspective: 1500px;
+}
+
+/**
+ * Okey,我还需要一个填充内容的容器
+ */
+.resume-div {
+  position: fixed; right: 10px; top: 10px;
+  padding: 10px; margin: 10px;
+  width: 48%; height: 90%;
+  border: 1px solid;
+  background: rgb(48, 48, 48); color: white;
+  overflow: auto;
+  transform: rotateY(-10deg) translateZ(-100px);
+  -webkit-transform: rotateY(-10deg) translateZ(-100px);
+}
+
+/**
+ * 好，开始写内容
+ */
 
 
 `,
-          `
-/* 这个简历好像差点什么
- * 对了，这是 Markdown 格式的，我需要变成对 HR 更友好的格式
- * 简单，用开源工具翻译成 HTML 就行了
+`
+/**
+ * 把 Markdown 格式转换成 HTML
  */
 `
-          ,
-          `
-/* 再对 HTML 加点样式 */
-.resumeEditor{
-  padding: 2em;
-}
-.resumeEditor h2{
+,
+`
+/**
+ * 我现在感觉Markdown格式更好看
+ * 对 HTML 加点样式
+ */
+.resume-div a {
+      color: wheat;
+  }
+.resume-div h2 {
   display: inline-block;
   border-bottom: 1px solid;
-  margin: 1em 0 .5em;
+  margin: 20px 0 10px;
 }
-.resumeEditor ul,.resumeEditor ol{
+.resume-div ul,.resume-div ol {
   list-style: none;
 }
-.resumeEditor ul> li::before{
+.resume-div ul> li::before {
   content: '•';
-  margin-right: .5em;
+  margin-right: 10px;
 }
-.resumeEditor ol {
-  counter-reset: section;
+.resume-div ul> li {
+   margin: 8px;
 }
-.resumeEditor ol li::before {
-  counter-increment: section;
-  content: counters(section, ".") " ";
-  margin-right: .5em;
-}
-.resumeEditor blockquote {
-  margin: 1em;
-  padding: .5em;
-  background: #ddd;
-}
+
+/**
+ * OK,还有最后一句话
+ * PHP是世界上最好的语言
+ */
 `],
         currentMarkdown: '',
-        fullMarkdown: `路人甲
+        fullMarkdown: `
+## Arch.run
 ----
 
-资深前端工程师，前端技术布道师，现 [HBT](http://honeywell.com.cn) Web前端技术负责人。
+技术爱好者、开源爱好者、技术极客、技术布道师
+- Email：;
+- open source ：;
 
-技能
+## 基本信息
 ----
 
-* H5/CSS/SCSS前端开发
-* Typescript/Javascript开发
-* Node.js 开发
-* WebAssembly
-* WebRTC/MSE
+- name;
+- education
+- location;
+- hobby
 
-工作经历
+## 技能
 ----
 
-1. [太空](http://gotolive.space)
-2. Honeywell Video Security
-3. Honeywell HBT
+* LINUX|wINDOWS | GIT | NGINX | KUBERNETES
+* ELASTICSEARCH | REDIS | KAFKA | DOCKER
+* COMPOSER | NPM | WEBPACK | GULP
+* PHP | MYSQL | LARAVEL | SYMFONY
+* UNI-APP | VUE | MP-WEIXIN | NODEJS
 
-链接
+## 工作经历
 ----
 
+- A Company
+- B Company
+- C Company
+
+## 链接
+----
+
+* [Open Source](http://github.com/gb28181)
 * [GitHub](https://github.com/crazybber)
-
-Fork [我的项目](https://github.com/crazybber/animating-resume)，打造你自己的页面！
-
+* [Community](https://github.com/micro-in-cn)
 `
       }
     },
@@ -223,9 +265,10 @@ Fork [我的项目](https://github.com/crazybber/animating-resume)，打造你�
   }
 
   html {
-    min-height: 100vh;
+    min-height: 100%;
   }
   *{
     box-sizing: border-box;
   }
+
 </style>

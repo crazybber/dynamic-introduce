@@ -1,5 +1,5 @@
 <template>
-  <div class="resumeEditor" :class="{htmlMode:enableHtml}" ref="container">
+  <div class="resume-div" :class="{htmlMode:enableHtml}" ref="container">
     <div v-if="enableHtml" v-html="result"></div>
     <pre v-else>{{result}}</pre>
   </div>

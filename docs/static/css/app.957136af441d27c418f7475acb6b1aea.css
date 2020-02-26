@@ -5,12 +5,13 @@
   -moz-osx-font-smoothing: grayscale;
 }
 html[data-v-288975d1] {
-  min-height: 100vh;
+  min-height: 100%;
 }
 *[data-v-288975d1]{
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+
 
 pre[data-v-2ca90776]{
 }
@@ -54,10 +55,9 @@ to {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  min-height: 100vh; position: relative;
 }
 html[data-v-b76f4cbc] {
-  min-height: 100vh;
+  min-height: 100%;
 }
 *[data-v-b76f4cbc]{
   -webkit-box-sizing: border-box;
@@ -65,4 +65,4 @@ html[data-v-b76f4cbc] {
 }
 
 
-/*# sourceMappingURL=app.789e562e6306690f5645f11d3044b04d.css.map*/
+/*# sourceMappingURL=app.957136af441d27c418f7475acb6b1aea.css.map*/
