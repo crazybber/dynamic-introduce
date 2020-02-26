@@ -8,7 +8,8 @@ html[data-v-288975d1] {
   min-height: 100vh;
 }
 *[data-v-288975d1]{
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 pre[data-v-2ca90776]{
@@ -26,7 +27,16 @@ pre[data-v-2ca90776]{
 }
 }
 .htmlMode[data-v-2df95543] {
-  animation: flip 2s;
+  -webkit-animation: flip 2s;
+          animation: flip 2s;
+}
+@-webkit-keyframes flip {
+from {
+    opacity: 0;
+}
+to {
+    opacity: 1;
+}
 }
 @keyframes flip {
 from {
@@ -50,8 +60,9 @@ html[data-v-b76f4cbc] {
   min-height: 100vh;
 }
 *[data-v-b76f4cbc]{
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 
-/*# sourceMappingURL=app.c621eefefd07131600acad2fcbee2d4f.css.map*/
+/*# sourceMappingURL=app.789e562e6306690f5645f11d3044b04d.css.map*/
