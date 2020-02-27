@@ -6,35 +6,34 @@
 </template>
 
 <script>
-  import Prism from 'prismjs'
-  export default {
-    name: 'Editor',
-    props: ['code'],
-    computed: {
-      highlightedCode: function () {
-        return Prism.highlight(this.code, Prism.languages.css)
-      },
-      codeInStyleTag: function () {
-        return `<style>${this.code}</style>`
-      }
+import Prism from "prismjs";
+export default {
+  name: "Editor",
+  props: ["code"],
+  computed: {
+    highlightedCode: function() {
+      return Prism.highlight(this.code, Prism.languages.css);
     },
-    methods: {
-      goBottom() {
-        this.$refs.container.scrollTop = 100000
-      }
+    codeInStyleTag: function() {
+      return `<style>${this.code}</style>`;
+    }
+  },
+  methods: {
+    goBottom() {
+      this.$refs.container.scrollTop = 100000;
     }
   }
-
+};
 </script>
 
 <style scoped>
-  pre{
-  }
-  @media (max-width:500px){
-    pre{
-    }
-  }
-  .code {
-    display: none;
-  }
+/* pre {
+} */
+@media (max-width: 500px) {
+  /* pre {
+  } */
+}
+.code {
+  display: none;
+}
 </style>
