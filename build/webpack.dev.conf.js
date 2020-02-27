@@ -5,6 +5,7 @@ var merge = require('webpack-merge')
 var baseWebpackConfig = require('./webpack.base.conf')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
+var VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 // add hot-reload related code to entry chunks
 Object.keys(baseWebpackConfig.entry).forEach(function (name) {
@@ -21,6 +22,9 @@ module.exports = merge(baseWebpackConfig, {
  // disableHostCheck:true
 },
   plugins: [
+    // make sure to include the plugin for the magic
+    new VueLoaderPlugin(),
+
     new webpack.DefinePlugin({
       'process.env': config.dev.env
     }),
