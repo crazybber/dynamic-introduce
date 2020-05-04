@@ -48,7 +48,7 @@ html {
   background: rgba(101, 234, 45, 0.59);
   height:100%; width:100%;
   overflow: hidden;
-            /* Emmm.. It doesn't seem to fit me */
+/* Emmm.. It doesn't seem to fit me */
   background: rgb(63, 82, 99);
 }
 
@@ -78,7 +78,7 @@ html {
 }
 
 /**
- * 代码看着不舒服,加个高亮
+ * 继续高亮一下
  */
 .token.comment { color: #857F6B; font-size: 12px; font-style: italic; }
 .token.selector { color: #E69F0F }
@@ -110,18 +110,18 @@ html {
   transform: rotateX(-30deg) translateZ(0px) ;
 }
 
-/* 接下来,正文就要登场了 
- * 要一个填充内容的容器
+/** 接下来,正文就要登场了
+ * 还要一个填充内容的容器
  */
  .resumeEditor{
   position: fixed;
   top: 21%; left: 0; right: 0;
-  padding: .5em;  
+  padding: .5em;
   margin: 20px;
   height: 72vh;
-/* width: 90%;
-   height: 70%;
-*/
+/* width: 90%; */
+/*   height: 70%; */
+
   border: 1px solid;
   background: #FCFFDB; color: #222;
   overflow: auto;
@@ -135,15 +135,15 @@ html {
 
 `,
         `
-/* 
+/*
  * 对了，这是 Markdown 格式的，需要变成更友好的格式
  * 简单，用开源工具翻译成 HTML 就行了
  */
 `,
         `
 /**
- * 我现在竟然感觉Markdown格式更好看
- * 格式还需要优化  
+ * 显示Markdown格式更好看
+ * 不过，格式还需要优化
  **/
 .resumeEditor{
   padding: 20px 4vw;
@@ -232,18 +232,27 @@ h3{
 
 `],
         currentMarkdown: '',
-        fullMarkdown: ` https://arch.run
+        fullMarkdown: `
+## Arch.run
 ----
 
-# Arch.run Introduce
+- Mobile：136 - hello - world;
+- Wrchat：;
 - Site: arch.run;
+
 
 ## 基本信息
 
+![some-pics](./some.pic.png)
+
+- Name;
+- Education;
+- Location;
+- Work
 
 ## 技能
 ----
-![some-pics](./some.pic.png)
+
 
 * LINUX | GIT | NGINX | APACHE
 * ELASTICSEARCH | REDIS | KAFKA | DOCKER
