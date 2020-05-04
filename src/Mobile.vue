@@ -27,10 +27,10 @@ export default {
       enableHtml: false,
       fullStyle: [
         `/**
- * Everybody yo yo ,come let's go !
  * Hello ,I am Arch.run
- * I love new techs
- * i want to say something
+ * I love new Techs
+ * I am good at trcing New Technology
+
  */
 
 /**
@@ -47,23 +47,31 @@ export default {
 html {
   background: rgba(101, 234, 45, 0.59);
   height:100%; width:100%;
-          /* Emmm.. It doesn't seem to fit me */
+  overflow: hidden;
+            /* Emmm.. It doesn't seem to fit me */
   background: rgb(63, 82, 99);
 }
 
 /**
  * ok,美化一下我们的工作区
  */
-.style-div {
-  padding: 10px 10px 20px;
+.styleEditor {
+  padding: .5em;
+  border: 1px solid;
   overflow: auto;
   background: rgb(48, 48, 48);
   color: white;
   border: 1px solid #ccc;
   width: 95%;
   height: 90%;
-  font-size: 14px;
   box-shadow: -4px 4px 2px 0 rgba(0,0,0,0.3);
+  }
+/* 代码高亮才不容易出错 */
+.token.selector{
+  color: rgb(133,153,0);
+}
+.token.property{
+  color: rgb(187,137,0);
 }
 .style-div:hover {
   box-shadow: 0px 0px 40px 5px rgba(255,255,255,0.4);
@@ -87,26 +95,37 @@ html {
   -webkit-transform: rotateY(10deg) translateZ(-100px);
 }
 
-/**
- * 改变一下可视角度
- */
-html {
-  perspective: 1500px;
-  -webkit-perspective: 1500px;
+/* 太高了 */
+.styleEditor {
+  height: 20vh;
 }
 
-/**
- * Okey,我还需要一个填充内容的容器
+html {
+  perspective: 1000px;
+  -webkit-perspective: 1000px;
+}
+.styleEditor {
+  z-index: 10000;
+  position: fixed; left: 0; top: 0;
+  transform: rotateX(-30deg) translateZ(0px) ;
+}
+
+/* 接下来,正文就要登场了 
+ * 要一个填充内容的容器
  */
-.resume-div {
-  position: fixed; right: 10px; top: 10px; z-index: 9999;
-  padding: 10px; margin: 10px;
-  width: 90%;
-  height: 70%;
+ .resumeEditor{
+  position: fixed;
+  top: 21%; left: 0; right: 0;
+  padding: .5em;  
+  margin: 20px;
+  height: 72vh;
+/* width: 90%;
+   height: 70%;
+*/
   border: 1px solid;
-  background: rgb(48, 48, 48); color: white;
+  background: #FCFFDB; color: #222;
   overflow: auto;
-  transform: rotateY(-10deg) translateZ(-100px);
+  border-radius: 8px;
   -webkit-transform: rotateY(-10deg) translateZ(-100px);
 }
 
@@ -114,62 +133,117 @@ html {
  * 好，开始写内容
  */
 
-
 `,
         `
-/**
- * 把 Markdown 格式转换成 HTML
+/* 
+ * 对了，这是 Markdown 格式的，需要变成更友好的格式
+ * 简单，用开源工具翻译成 HTML 就行了
  */
 `,
         `
 /**
  * 我现在竟然感觉Markdown格式更好看
- * 再对 HTML 加点样式
- */
-.resume-div a {
-      color: wheat;
-  }
-.resume-div h2 {
-    display: inline-block;
-    border-bottom: 1px solid;
-    margin: 20px 0 10px;
-  }
-.resume-div ul,.resume-div ol {
-    list-style: none;
-  }
-.resume-div ul> li::before {
-    content: '•';
-    margin-right: 10px;
-  }
-.resume-div ul> li {
-    margin: 8px;
+ * 格式还需要优化  
+ **/
+.resumeEditor{
+  padding: 20px 4vw;
+}
+
+/* 标题太大了 */
+.resumeEditor h1{
+  font-size:24px;
   }
 
-/**
- * OK,还有最后一句话
- * PHP是世界上最好的语言
- */
-`
-      ],
-      currentMarkdown: "",
-      fullMarkdown: `
-## Arch.run
+/* 副标题也太大了 */
+    display: inline-block;
+.resumeEditor h2{
+  display: inline-block;
+    margin: 20px 0 10px;
+  font-size: 20px;
+  color: #007419;
+  }
+
+/* 文本需要精致的排版 */
+
+.resumeEditor li{ font-size: 15px;}
+.resumeEditor li strong{ color:#003174;}
+.resumeEditor ul,.resumeEditor ol{ list-style: none; }
+.resumeEditor ul> li::before{ content: '•'; margin-right: .5em; }
+.resumeEditor ol { counter-reset: section; }
+.resumeEditor ol li::before {
+  counter-increment: section;
+  content: counters(section, ".") " ";
+  margin-right: .5em;
+}
+.resumeEditor blockquote {
+  margin: 1em;
+  padding: .5em;
+  background: #ddd;
+}
+
+.resumeEditor p{
+  font-size: 15px;
+  margin-bottom: 0.5em;
+}
+
+.resumeEditor p strong{
+  color:#003174;
+}
+
+/* 图片也需要圆角和阴影 */
+.resumeEditor img {
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  margin-top: 10px;
+}
+
+hr {
+  margin:20px 0;
+}
+
+/* 好了,Lets's review it ！*/
+
+* {
+  transition: all 1s;
+}
+.styleEditor {
+  opacity:0;
+}
+.resumeEditor {
+  top:0;
+  height:95vh;
+  z-index:10;
+}
+.background{
+  position:fixed;
+  left:0;
+  top:0;
+  height:100vh; width:100vh;
+  background: rgb(0,43,54);
+  z-index:-10;
+}
+
+h3{
+  margin-bottom: 10px;
+}
+
+
+
+`],
+        currentMarkdown: '',
+        fullMarkdown: ` https://arch.run
 ----
 
-- Mobile：136 - hello - world;
-- Wrchat：;
+# Arch.run Introduce
 - Site: arch.run;
 
 ## 基本信息
-----
 
-- Name;
-- Education;
-- Location;
-- Work
 
 ## 技能
 ----
+![some-pics](./some.pic.png)
 
 * LINUX | GIT | NGINX | APACHE
 * ELASTICSEARCH | REDIS | KAFKA | DOCKER
@@ -180,9 +254,8 @@ html {
 ## 工作经历
 ----
 
-- Company A
-- Company B
-- Company C
+* [GitHub](https://github.com/crazybber)
+* [Golang](https://github.com/crazybber/go-fucking-exercise)
 
 ## 链接
 ----
