@@ -154,7 +154,6 @@ html {
   }
 
 /* 副标题也太大了 */
-    display: inline-block;
 .resumeEditor h2{
   display: inline-block;
     margin: 20px 0 10px;
@@ -227,8 +226,6 @@ h3{
   margin-bottom: 10px;
 }
 
-
-
 `],
         currentMarkdown: '',
         fullMarkdown: `
@@ -242,12 +239,10 @@ h3{
 
 ## 基本信息
 
-![some-pics](./some.pic.png)
-
-- Name;
-- Education;
-- Location;
-- Work
+- Name https://arch.run;
+- Education Had been to School;
+- Location SH;
+- Work IT;
 
 ## 技能
 ----
