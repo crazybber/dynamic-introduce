@@ -27,10 +27,9 @@ export default {
       enableHtml: false,
       fullStyle: [
         `/**
- * Hello ,I am Arch.run
- * I love new Techs
- * I am good at trcing New Technology
-
+ * Hello:I am Arch.run
+ * I am good at tracing New Technology
+ * Built On: vue2.6+/webpack4+/babel7+
  */
 
 /**
