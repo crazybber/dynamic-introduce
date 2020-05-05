@@ -6,9 +6,9 @@
 </template>
 
 <script>
-  import StyleEditor from './components/StyleEditor'
-  import ResumeEditor from './components/ResumeEditor'
-  import './assets/reset.css'
+  import StyleEditor from './components/StyleEditor';
+  import ResumeEditor from './components/ResumeEditor';
+  import './assets/reset.css';
 
 export default {
   name: 'app',
@@ -25,7 +25,9 @@ export default {
         `/*
  * Hello:I am Arch.run
  * I am good at tracing New Technology
- * Built On: vue2.6+/webpack4+/babel7+
+ * Supported by: vue2.6+/webpack4+/babel7+
+ * I will build a single page to gather some useful resource, in future
+ * at the begaiing ,just a little trick.
  */
 
 /*
@@ -50,7 +52,8 @@ body{
 
 /*
  * ok,美化一下我们的工作区
- * 加上框框，到正中间，看着舒服
+ * 加上框框，整个区域居中，看着舒服
+ * 在给框框加个3D阴影效果，高大上一点点
  */
 .styleEditor {
   padding: .5em;
@@ -62,7 +65,7 @@ body{
   box-shadow: -4px 4px 2px 0 rgba(0,0,0,0.3);
   }
 /*
- *代码高亮才不容易出错
+ *代码高亮才不容易出错，给选择器，属性，标点符号，函数名啥的也都加上风格
 */
 .token.selector{
   color: rgb(133,153,0);
@@ -77,14 +80,14 @@ body{
   color: rgb(42,161,152);
 }
 /*
- *给编辑区来点鼠标悬浮效果，或许看着牛逼一点
+ * 给编辑区来点鼠标悬浮效果，或许看着牛逼一点
  */
 .styleEditor:hover {
   box-shadow: 0px 0px 40px 5px rgba(255,255,255,0.4);
 }
 
 /*
- * 干脆也给注释，选择器，属性，标点函数名字啥的也点风格
+ * 高亮颜色好像不好看，换个风格，重新加一下
  */
 .token.comment { color: #857F6B; font-size: 12px; font-style: italic; }
 .token.selector { color: #E69F0F }
@@ -122,7 +125,7 @@ html {
 .styleEditor {
   z-index: 10000;
   position: fixed; left: 0; top: 0;
-  transform: rotateX(-30deg) translateZ(0px) ;
+  transform: rotateX(-30deg) translateZ(0px);
 }
 
 /*
@@ -134,8 +137,8 @@ html {
   position: fixed;
   top: 25vh; left: 0; right: 0;
   padding: .5em;
-  margin: 20px;
-  height: 72vh;
+  margin: 15px;
+  height: 70vh;
   border: 1px solid;
   background: #FCFFDB; color: #222;
   overflow: auto;
@@ -162,12 +165,16 @@ html {
   padding: 20px 4vw;
 }
 
-/* 标题太大了 */
+/*
+*标题不能太大
+*/
 .resumeEditor h1{
   font-size:24px;
   }
 
-/* 副标题也太大了 */
+/*
+*副标题也不能太了
+*/
 .resumeEditor h2{
   display: inline-block;
     margin: 20px 0 10px;
@@ -178,7 +185,6 @@ html {
 /*
 *文本需要精致的排版
 */
-
 .resumeEditor li{ font-size: 15px;}
 .resumeEditor li strong{ color:#003174;}
 .resumeEditor ul,.resumeEditor ol{ list-style: none; }
@@ -205,7 +211,7 @@ html {
 }
 
 /*
-*图片也需要圆角和阴影
+*如果在未来加图片，也需要圆角和阴影
 */
 .resumeEditor img {
   width: 100%;
@@ -245,45 +251,51 @@ h3{
 }
 
 `],
-        currentMarkdown: '',
-        fullMarkdown: `
+currentMarkdown: '',
+fullMarkdown: `
+
 ## Arch.run
 ----
 
-- Mobile：136 - hello - world;
-- Wrchat：;
-- Site: arch.run;
+- Mobile：15*********;
+- Wrchat：crazybber;
+- Site: https://arch.run;
 
 
 ## 基本信息
 
-- Name https://arch.run;
-- Education Had been to School;
-- Location SH;
-- Work IT;
+- Name: https://arch.run;
+- Education: Never had been to School;
+- Location: SH;
+- Work: Now you see i'm a simle site;
 
-## 技能
+## Skill Sets
 ----
 
+* SVN | GIT | NGINX | APACHE
+* LINUX | windows | MacOS | Android | UOS
+* Kubernets | DOCKER
+* MQ|MQTT|Onvif|Video|Streaming
+* PIP | NPM | WEBPACK | GULP
+* Golang | C# | LARAVEL | SYMFONY
+* Angular | VUE | H5 | NODEJS
 
-* LINUX | GIT | NGINX | APACHE
-* ELASTICSEARCH | REDIS | KAFKA | DOCKER
-* COMPOSER | NPM | WEBPACK | GULP
-* PHP | MYSQL | LARAVEL | SYMFONY
-* UNI-APP | VUE | MP-WEIXIN | NODEJS
-
-## 牛逼经历
+## Resources
 ----
 
-* [GitHub](https://github.com/crazybber)
-* [Golang](https://github.com/crazybber/go-fucking-exercise)
+* [Go Exercise](https://github.com/crazybber/go-fucking-exercise)
+* [Go Patterns](https://github.com/crazybber/go-fucking-patterns)
 
-## 链接
+## Organizations
 ----
 
 * [Open Source](http://github.com/gb28181)
-* [GitHub](https://github.com/crazybber)
 * [Community](https://github.com/micro-in-cn)
+
+## Links
+----
+* [GitHub](https://github.com/crazybber)
+
   `
     };
   },
