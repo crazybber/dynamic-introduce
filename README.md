@@ -2,20 +2,20 @@
 
 > This is a dynamic resume preview use docs folder
 
-[预览](https://crazybber.github.io/animating-introduce)
+[预览](https://crazybber.github.io/dynamic-introduce)
 
 ## 使用方法
 
 ``` bash
-git clone https://github.com/crazybber/animating-introduce.git
+git clone https://github.com/crazybber/dynamic-introduce.git
 cd animating-introduce
 npm install
 npm run dev
 ```
 
-## 部署方法
+## 部署调试说明
 
-1. 编辑 config/index.js，修改第 10 行的 assetsPublicPath，值为 `你的输出目录(如:public)`。如果你没有修改项目名 animating-introduce，则可跳过此步骤。
+1. 编辑 config/index.js，修改第 10 行的 assetsPublicPath，值为 `你的输出目录(如:public)`。如果你没有修改项目名 dynamic-introduce，则可跳过此步骤。
 
 1. 修改debug模式下的访问端口，编辑：config/index.js，修改第26行。当前port: 80,
 
@@ -24,7 +24,7 @@ npm run dev
 ```bash
     npm run build
     git add .
-    git commit -m "update"
+    git commit -m "update site"
     git push origin master
 ```
 
