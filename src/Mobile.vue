@@ -272,7 +272,7 @@ h3{
 * PHP | MYSQL | LARAVEL | SYMFONY
 * UNI-APP | VUE | MP-WEIXIN | NODEJS
 
-## 工作经历
+## 牛逼经历
 ----
 
 * [GitHub](https://github.com/crazybber)
