@@ -256,14 +256,12 @@ fullMarkdown: `
 
 ## Arch.run
 ----
-
 - Mobile：15*********;
-- Wrchat：crazybber;
+- Wechat：crazybber;
 - Site: https://arch.run;
 
 
 ## 基本信息
-
 - Name: https://arch.run;
 - Education: Never had been to School;
 - Location: SH;
@@ -271,7 +269,6 @@ fullMarkdown: `
 
 ## Skill Sets
 ----
-
 * SVN | GIT | NGINX | APACHE
 * LINUX | windows | MacOS | Android | UOS
 * Kubernets | DOCKER
@@ -280,15 +277,15 @@ fullMarkdown: `
 * Golang | C# | LARAVEL | SYMFONY
 * Angular | VUE | H5 | NODEJS
 
+
 ## Resources
 ----
-
 * [Go Exercise](https://github.com/crazybber/go-fucking-exercise)
 * [Go Patterns](https://github.com/crazybber/go-fucking-patterns)
 
+
 ## Organizations
 ----
-
 * [Open Source](http://github.com/gb28181)
 * [Community](https://github.com/micro-in-cn)
 
