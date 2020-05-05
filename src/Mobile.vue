@@ -28,40 +28,42 @@ export default {
  * Built On: vue2.6+/webpack4+/babel7+
  */
 
-/**
+/*
  *  首先给所有元素加上过渡效果
  */
 * {
   transition: all 1s;
-  -webkit-transition: all 1s;
 }
 
-/**
+/*
  *  白色背景太单调了,我们来点背景
  */
 html {
-  background: rgba(101, 234, 45, 0.59);
-  height:100%; width:100%;
+  color: rgb(222,222,222);
+  background: rgb(0,43,54);
   overflow: hidden;
-/* Emmm.. It doesn't seem to fit me */
-  background: rgb(63, 82, 99);
 }
 
-/**
+body{
+  background: rgb(0,43,54);
+}
+
+/*
  * ok,美化一下我们的工作区
+ * 加上框框，到正中间，看着舒服
  */
 .styleEditor {
   padding: .5em;
   border: 1px solid;
   overflow: auto;
-  background: rgb(48, 48, 48);
-  color: white;
-  border: 1px solid #ccc;
-  width: 95%;
-  height: 90%;
+  margin: 2.5vh 5vw;
+  height: 90vh;
+  width: 90vw;
   box-shadow: -4px 4px 2px 0 rgba(0,0,0,0.3);
   }
-/* 代码高亮才不容易出错 */
+/*
+ *代码高亮才不容易出错
+*/
 .token.selector{
   color: rgb(133,153,0);
 }
@@ -74,12 +76,15 @@ html {
 .token.function{
   color: rgb(42,161,152);
 }
-.style-div:hover {
+/*
+ *给编辑区来点鼠标悬浮效果，或许看着牛逼一点
+ */
+.styleEditor:hover {
   box-shadow: 0px 0px 40px 5px rgba(255,255,255,0.4);
 }
 
-/**
- * 继续高亮一下
+/*
+ * 干脆也给注释，选择器，属性，标点函数名字啥的也点风格
  */
 .token.comment { color: #857F6B; font-size: 12px; font-style: italic; }
 .token.selector { color: #E69F0F }
@@ -87,66 +92,72 @@ html {
 .token.punctuation { color: #ddd; }
 .token.function { color: #BE84F2; }
 
-/**
+
+/*
  * 加一些3D转换效果
  */
-.style-div {
+.styleEditor {
   position: fixed; left: 10px; top: 10px;
   transform: rotateY(10deg) translateZ(-100px);
-  -webkit-transform: rotateY(10deg) translateZ(-100px);
 }
 
-/* 太高了 */
+/*
+*emm，快要写正文了，缩小一下代码区，放到正中间上方，方便下面放内容
+*/
 .styleEditor {
-  height: 20vh;
+  height: 25vh;
 }
 
-/* 加点 3D 效果呗 */
+/*
+*加点透视效果
+*/
 html {
   perspective: 1000px;
-  -webkit-perspective: 1000px;
 }
+
+/*
+ * 这个斜斜的3D效果有点难看，还是再改一下
+ * 重新设置code编辑区,再搞到3D效果
+ */
 .styleEditor {
   z-index: 10000;
   position: fixed; left: 0; top: 0;
   transform: rotateX(-30deg) translateZ(0px) ;
 }
 
-/** 接下来,正文就要登场了
- * 还要一个填充内容的容器
+/*
+ * 接下来,为正文编辑做点准备
+ * 设置设置一下正文区位置
+ * 还要允许滚动，不然内容太长就看不见了
  */
  .resumeEditor{
   position: fixed;
-  top: 21%; left: 0; right: 0;
+  top: 25vh; left: 0; right: 0;
   padding: .5em;
   margin: 20px;
   height: 72vh;
-/* width: 90%; */
-/*   height: 70%; */
-
   border: 1px solid;
   background: #FCFFDB; color: #222;
   overflow: auto;
   border-radius: 8px;
-  -webkit-transform: rotateY(-10deg) translateZ(-100px);
 }
 
-/**
- * 好，开始写内容
+/*
+ * 好，开始撸一下正文内容
  */
 
 `,
         `
 /*
- * 对了，这是 Markdown 格式的，需要变成更友好的格式
- * 简单，用开源工具翻译成 HTML 就行了
+ * 这是 Markdown 格式的，需要变成更友好的格式
+ * 我们阔以用开源工具翻译到HTML
  */
 `,
         `
-/**
+/*
  * 显示Markdown格式更好看
  * 不过，格式还需要优化
- **/
+ */
 .resumeEditor{
   padding: 20px 4vw;
 }
@@ -164,7 +175,9 @@ html {
   color: #007419;
   }
 
-/* 文本需要精致的排版 */
+/*
+*文本需要精致的排版
+*/
 
 .resumeEditor li{ font-size: 15px;}
 .resumeEditor li strong{ color:#003174;}
@@ -191,7 +204,9 @@ html {
   color:#003174;
 }
 
-/* 图片也需要圆角和阴影 */
+/*
+*图片也需要圆角和阴影
+*/
 .resumeEditor img {
   width: 100%;
   border-radius: 5px;
