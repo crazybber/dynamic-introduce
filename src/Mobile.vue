@@ -41,7 +41,7 @@ export default {
 }
 
 /**
- * 白色背景太刺眼,换一个原谅绿
+ *  白色背景太单调了,我们来点背景
  */
 html {
   background: rgba(101, 234, 45, 0.59);
@@ -72,6 +72,12 @@ html {
 .token.property{
   color: rgb(187,137,0);
 }
+.token.punctuation{
+  color: yellow;
+}
+.token.function{
+  color: rgb(42,161,152);
+}
 .style-div:hover {
   box-shadow: 0px 0px 40px 5px rgba(255,255,255,0.4);
 }
@@ -99,6 +105,7 @@ html {
   height: 20vh;
 }
 
+/* 加点 3D 效果呗 */
 html {
   perspective: 1000px;
   -webkit-perspective: 1000px;
