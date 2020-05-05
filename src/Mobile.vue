@@ -1,21 +1,17 @@
 <template>
   <div id="app">
     <StyleEditor ref="styleEditor" :code="currentStyle"></StyleEditor>
-    <ResumeEditor
-      ref="resumeEditor"
-      :markdown="currentMarkdown"
-      :enableHtml="enableHtml"
-    ></ResumeEditor>
+    <ResumeEditor ref="resumeEditor" :markdown="currentMarkdown" :enableHtml="enableHtml"></ResumeEditor>
   </div>
 </template>
 
 <script>
-import StyleEditor from "./components/StyleEditor";
-import ResumeEditor from "./components/ResumeEditor";
-import "./assets/reset.css";
+  import StyleEditor from './components/StyleEditor'
+  import ResumeEditor from './components/ResumeEditor'
+  import './assets/reset.css'
 
 export default {
-  name: "app",
+  name: 'app',
   components: {
     StyleEditor,
     ResumeEditor
@@ -23,10 +19,10 @@ export default {
   data() {
     return {
       interval: 20,
-      currentStyle: "",
+      currentStyle: '',
       enableHtml: false,
       fullStyle: [
-        `/**
+        `/*
  * Hello:I am Arch.run
  * I am good at tracing New Technology
  * Built On: vue2.6+/webpack4+/babel7+
