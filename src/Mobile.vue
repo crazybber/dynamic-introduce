@@ -13,7 +13,7 @@
 import StyleEditor from "./components/StyleEditor";
 import ResumeEditor from "./components/ResumeEditor";
 import "./assets/reset.css";
-
+import axios from "axios";
 export default {
   name: "app",
   components: {
@@ -31,10 +31,11 @@ export default {
  * I am good at tracing New Technology
  * Supported by: vue2.6+/webpack4+/babel7+
  * I will build a single page to gather some useful resource, in future
- * at the begaiing ,just a little trick.
+ * at the starting ,just a little trick.
  */
 
 /*
+ *  OK,Let's begin
  *  首先给所有元素加上过渡效果
  */
 * {
@@ -55,7 +56,7 @@ body{
 }
 
 /*
- * ok,美化一下我们的工作区
+ * 美化一下工作区
  * 加上框框，整个区域居中，看着舒服
  * 在给框框加个3D阴影效果，高大上一点点
  */
@@ -353,6 +354,12 @@ h3{
       });
     },
     progressivelyShowResume() {
+      let loadMD = () => {
+        const url = "./content.md";
+        axios.get(url).then((response) => {
+          this.fullMarkdown = response.data;
+        });
+      };
       return new Promise((resolve, reject) => {
         let length = this.fullMarkdown.length;
         let interval = this.interval;
@@ -376,6 +383,7 @@ h3{
             resolve();
           }
         };
+        loadMD();
         showResume();
       });
     },
