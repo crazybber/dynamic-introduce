@@ -1,48 +1,46 @@
 <template>
-  <div class="resumeEditor" :class="{htmlMode:enableHtml}" ref="container">
+  <div class="resumeEditor" :class="{ htmlMode: enableHtml }" ref="container">
     <div v-if="enableHtml" v-html="result"></div>
-    <pre v-else>{{result}}</pre>
+    <pre v-else>{{ result }}</pre>
   </div>
 </template>
 
 <script>
-  import marked from 'marked';
-  export default {
-    props: ['markdown', 'enableHtml'],
-    name: 'ResumeEditor',
-    computed: {
-      result: function () {
-        return this.enableHtml ? marked(this.markdown) : this.markdown
-      }
+import marked from "marked";
+export default {
+  props: ["markdown", "enableHtml"],
+  name: "ResumeEditor",
+  computed: {
+    result: function() {
+      return this.enableHtml ? marked(this.markdown) : this.markdown;
     },
-    methods: {
-      goBottom: function () {
-        this.$refs.container.scrollTop = 100000
-      },
-      goTop: function(){
-        this.$refs.container.scrollTop = 0
-      }
-    }
-  }
-
+  },
+  methods: {
+    goBottom: function() {
+      this.$refs.container.scrollTop = 100000;
+    },
+    goTop: function() {
+      this.$refs.container.scrollTop = 0;
+    },
+  },
+};
 </script>
 
 <style scoped>
+@media (max-width: 700px) {
+  .resumeEditor {
+  }
+}
+.htmlMode {
+  animation: flip 2s;
+}
 
-  @media (max-width:700px){
-    .resumeEditor{
-    }
+@keyframes flip {
+  from {
+    opacity: 0;
   }
-  .htmlMode {
-    animation: flip 2s;
+  to {
+    opacity: 1;
   }
-
-  @keyframes flip {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
+}
 </style>

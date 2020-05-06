@@ -18,7 +18,7 @@ export default {
   name: "app",
   components: {
     StyleEditor,
-    ResumeEditor
+    ResumeEditor,
   },
   data() {
     return {
@@ -149,7 +149,7 @@ html {
  * OK,LAST WORDS
  * I JUST USE OTHER'S STYLES
  */
-`
+`,
       ],
       currentMarkdown: "",
       fullMarkdown: `
@@ -190,7 +190,7 @@ html {
 * [Open Source](http://github.com/gb28181)
 * [GitHub](https://github.com/crazybber)
 * [Community](https://github.com/micro-in-cn)
-`
+`,
     };
   },
   created() {
@@ -222,7 +222,7 @@ html {
           // 计算前 n 个 style 的字符总数
           let length = this.fullStyle
             .filter((_, index) => index <= n)
-            .map(item => item.length)
+            .map((item) => item.length)
             .reduce((p, c) => p + c, 0);
           let prefixLength = length - style.length;
           if (this.currentStyle.length < length) {
@@ -268,8 +268,8 @@ html {
         };
         showResume();
       });
-    }
-  }
+    },
+  },
 };
 </script>
 

@@ -1,25 +1,29 @@
 <template>
   <div id="app">
     <StyleEditor ref="styleEditor" :code="currentStyle"></StyleEditor>
-    <ResumeEditor ref="resumeEditor" :markdown="currentMarkdown" :enableHtml="enableHtml"></ResumeEditor>
+    <ResumeEditor
+      ref="resumeEditor"
+      :markdown="currentMarkdown"
+      :enableHtml="enableHtml"
+    ></ResumeEditor>
   </div>
 </template>
 
 <script>
-  import StyleEditor from './components/StyleEditor';
-  import ResumeEditor from './components/ResumeEditor';
-  import './assets/reset.css';
+import StyleEditor from "./components/StyleEditor";
+import ResumeEditor from "./components/ResumeEditor";
+import "./assets/reset.css";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
     StyleEditor,
-    ResumeEditor
+    ResumeEditor,
   },
   data() {
     return {
       interval: 20,
-      currentStyle: '',
+      currentStyle: "",
       enableHtml: false,
       fullStyle: [
         `/*
@@ -250,9 +254,10 @@ h3{
   margin-bottom: 10px;
 }
 
-`],
-currentMarkdown: '',
-fullMarkdown: `
+`,
+      ],
+      currentMarkdown: "",
+      fullMarkdown: `
 
 ## Arch.run
 ----
@@ -293,7 +298,7 @@ fullMarkdown: `
 ----
 * [GitHub](https://github.com/crazybber)
 
-  `
+  `,
     };
   },
   created() {
@@ -327,7 +332,7 @@ fullMarkdown: `
           // 计算前 n 个 style 的字符总数
           let length = this.fullStyle
             .filter((_, index) => index <= n)
-            .map(item => item.length)
+            .map((item) => item.length)
             .reduce((p, c) => p + c, 0);
           let prefixLength = length - style.length;
           if (this.currentStyle.length < length) {
@@ -373,8 +378,8 @@ fullMarkdown: `
         };
         showResume();
       });
-    }
-  }
+    },
+  },
 };
 </script>
 
