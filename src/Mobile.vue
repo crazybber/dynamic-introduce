@@ -314,7 +314,7 @@ h3{
     },
     progressivelyShowResume() {
       let loadMD = () => {
-        const url = "introduce.md";
+        const url = "./introduce.md";
         axios.get(url).then((response) => {
           this.fullMarkdown = response.data;
         });
