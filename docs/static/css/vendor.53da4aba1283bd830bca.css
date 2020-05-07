@@ -1,13 +1,13 @@
 
-#app[data-v-2b8f6639] {
+#app[data-v-7b6c38f4] {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-html[data-v-2b8f6639] {
+html[data-v-7b6c38f4] {
   min-height: 100%;
 }
-*[data-v-2b8f6639] {
+*[data-v-7b6c38f4] {
   box-sizing: border-box;
 }
 
@@ -34,4 +34,3 @@ to {
 *{box-sizing: border-box;}
 *::before{box-sizing: border-box;}
 *::after{box-sizing: border-box;}
-/*# sourceMappingURL=vendor.aae771e2b1e30071c097.css.map*/
