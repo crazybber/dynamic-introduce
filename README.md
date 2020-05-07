@@ -15,7 +15,7 @@ npm run dev
 
 ## 部署调试说明
 
-1. 编辑 config/index.js，修改第 10 行的 assetsPublicPath，值为 `你的输出目录(如:public)`。如果你没有修改项目名 dynamic-introduce，则可跳过此步骤。
+1. 编辑 config/index.js，修改第 10 行的 assetsPublicPath，值为 `你的输出目录(如:public)`。如果你没有修改(当前是"./")，则可跳过此步骤。
 
 1. 修改debug模式下的访问端口，编辑：config/index.js，修改第26行。当前port: 80,
 
