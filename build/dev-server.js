@@ -60,6 +60,15 @@ app.use(hotMiddleware)
 
 // serve pure static assets
 var staticPath = path.posix.join(config.dev.assetsPublicPath, config.dev.assetsSubDirectory)
+
+//console.log('> __dirname at ' + __dirname + '\n') //D:\Codes\Javascript\dynamic-introduce\build
+//console.log('> assetsRoot at ' + config.build.assetsRoot + '\n') //at D:\Codes\Javascript\dynamic-introduce\docs
+//console.log('> assetsSubDirectory at ' + config.build.assetsSubDirectory + '\n') //static
+
+// console.log('> config.dev.assetsPublicPath at ' + config.dev.assetsPublicPath + '\n')
+// console.log('> staticPath at ' + staticPath + '\n')
+
+
 app.use(staticPath, express.static('./static'))
 
 var uri = 'localhost:' + port
