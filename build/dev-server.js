@@ -8,6 +8,8 @@ if (!process.env.NODE_ENV) {
 var opn = require('opn')
 var path = require('path')
 var express = require('express')
+//var koa = require('koa')
+
 var webpack = require('webpack')
 var proxyMiddleware = require('http-proxy-middleware')
 var webpackConfig = require('./webpack.dev.conf')
@@ -21,6 +23,9 @@ var autoOpenBrowser = !!config.dev.autoOpenBrowser
 var proxyTable = config.dev.proxyTable
 
 var app = express()
+//const app = new koa();
+//const static = require('koa-static');
+
 var compiler = webpack(webpackConfig)
 
 var devMiddleware = require('webpack-dev-middleware')(compiler, {
@@ -64,14 +69,13 @@ var staticPath = path.posix.join(config.dev.assetsPublicPath, config.dev.assetsS
 //console.log('> __dirname at ' + __dirname + '\n') //D:\Codes\Javascript\dynamic-introduce\build
 //console.log('> assetsRoot at ' + config.build.assetsRoot + '\n') //at D:\Codes\Javascript\dynamic-introduce\docs
 //console.log('> assetsSubDirectory at ' + config.build.assetsSubDirectory + '\n') //static
-
 // console.log('> config.dev.assetsPublicPath at ' + config.dev.assetsPublicPath + '\n')
 // console.log('> staticPath at ' + staticPath + '\n')
+//server static,must have a named 'contents' dir in root
+app.use(staticPath, express.static('./contents'))
+//app.use(static(staticPath +'./static'))
 
-
-app.use(staticPath, express.static('./static'))
-
-var uri = 'localhost:' + port
+var uri = 'http://localhost:' + port
 
 devMiddleware.waitUntilValid(function () {
   console.log('> Listening at ' + uri + '\n')
