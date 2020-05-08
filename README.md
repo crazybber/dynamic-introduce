@@ -1,6 +1,6 @@
-# 一个动态的自我介绍
+# 一个动态的自我介绍,并且可以单独使用Markdown编辑内容，自动加载
 
-> This is a dynamic resume preview use docs folder
+> This is a dynamic introdcuing by markdown hosted in docs folder
 
 [预览](https://crazybber.github.io/dynamic-introduce)
 
