@@ -152,45 +152,7 @@ html {
 `,
       ],
       currentMarkdown: "",
-      fullMarkdown: `
-## Arch.run
-----
-
-技术爱好者、开源爱好者、技术极客、技术布道师
-- Email：;
-- open source ：;
-
-## 基本信息
-----
-
-- name;
-- education
-- location;
-- hobby
-
-## 技能
-----
-
-* LINUX|WINDOWS | GIT | NGINX | KUBERNETES
-* ELASTICSEARCH | REDIS | KAFKA | DOCKER
-* COMPOSER | NPM | WEBPACK | GULP
-* PHP | MYSQL | LARAVEL | SYMFONY
-* UNI-APP | VUE | MP-WEIXIN | NODEJS
-
-## 工作经历
-----
-
-- A Company
-- B Company
-- C Company
-
-## 链接
-----
-
-* [Open Source](http://github.com/gb28181)
-* [GitHub](https://github.com/crazybber)
-* [Community](https://github.com/micro-in-cn)
-`,
+      fullMarkdown: `this is still working`,
     };
   },
   created() {
