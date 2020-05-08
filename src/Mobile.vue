@@ -1,11 +1,7 @@
 <template>
   <div id="app">
     <StyleEditor ref="styleEditor" :code="currentStyle"></StyleEditor>
-    <ResumeEditor
-      ref="resumeEditor"
-      :markdown="currentMarkdown"
-      :enableHtml="enableHtml"
-    ></ResumeEditor>
+    <ResumeEditor ref="resumeEditor" :markdown="currentMarkdown" :enableHtml="enableHtml"></ResumeEditor>
   </div>
 </template>
 
@@ -18,7 +14,7 @@ export default {
   name: "app",
   components: {
     StyleEditor,
-    ResumeEditor,
+    ResumeEditor
   },
   data() {
     return {
@@ -50,7 +46,9 @@ html {
   background: rgb(0,43,54);
   overflow: hidden;
 }
-
+/*
+ *  有点暗，增加点背景
+ */
 body{
   background: rgb(0,43,54);
 }
@@ -255,18 +253,26 @@ h3{
   margin-bottom: 10px;
 }
 
-`,
+`
       ],
       currentMarkdown: "",
-      fullMarkdown: `loading.... `,
+      fullMarkdown: `loading...`
     };
   },
   created() {
-    this.makeResume();
+    this.loadMD(); //prepare content firstly
+    this.dynamicShowing();
   },
 
   methods: {
-    makeResume: async function() {
+    loadMD: function() {
+      const url = "contents/introduce.md";
+      axios.get(url).then(response => {
+        this.fullMarkdown = response.data;
+      });
+     // return this.fullMarkdown.length;
+    },
+    dynamicShowing: async function() {
       await this.progressivelyShowStyle(0);
       this.interval = 0;
       await this.progressivelyShowResume();
@@ -292,7 +298,7 @@ h3{
           // 计算前 n 个 style 的字符总数
           let length = this.fullStyle
             .filter((_, index) => index <= n)
-            .map((item) => item.length)
+            .map(item => item.length)
             .reduce((p, c) => p + c, 0);
           let prefixLength = length - style.length;
           if (this.currentStyle.length < length) {
@@ -313,14 +319,8 @@ h3{
       });
     },
     progressivelyShowResume() {
-      let loadMD = () => {
-        const url = "./introduce.md";
-        axios.get(url).then((response) => {
-          this.fullMarkdown = response.data;
-        });
-      };
       return new Promise((resolve, reject) => {
-        let length = this.fullMarkdown.length;
+        let length = this.fullMarkdown.length; //这个值被提前计算了
         let interval = this.interval;
         let showResume = () => {
           if (this.currentMarkdown.length < length) {
@@ -342,11 +342,10 @@ h3{
             resolve();
           }
         };
-        loadMD();
         showResume();
       });
-    },
-  },
+    }
+  }
 };
 </script>
 
