@@ -260,17 +260,21 @@ h3{
     };
   },
   created() {
-    this.loadMD(); //prepare content firstly
-    this.dynamicShowing();
+    //prepare content firstly
+    this.loadMD().then(loaded => {
+      if (loaded) {
+        this.dynamicShowing();
+      }
+    });
   },
 
   methods: {
     loadMD: function() {
       const url = "contents/introduce.md";
-      axios.get(url).then(response => {
+      return axios.get(url).then(response => {
         this.fullMarkdown = response.data;
+        return true;
       });
-     // return this.fullMarkdown.length;
     },
     dynamicShowing: async function() {
       await this.progressivelyShowStyle(0);
