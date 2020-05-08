@@ -31,4 +31,4 @@ npm run dev
 4. 开启 GitHub Pages 功能
 
 使用docs目录host站点
-![use-docs-for-git-pages](./contents/use-docs-for-gitpages.png)
+![use-docs-for-git-pages](./docs/use-docs-for-gitpages.png)
