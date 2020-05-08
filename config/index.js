@@ -2,10 +2,11 @@
 var path = require('path');
 
 module.exports = {
+  // for Webpack bundle
   build: {
     env: require('./prod.env'),
     index: path.resolve(__dirname, '../docs/index.html'),
-    assetsRoot: path.resolve(__dirname, '../docs'),
+    assetsRoot: path.resolve(__dirname, '../docs'), // __dirname :D:\Codes\Javascript\dynamic-introduce\build
     assetsSubDirectory: 'static',
     assetsPublicPath: './',
     productionSourceMap: false,
@@ -21,11 +22,12 @@ module.exports = {
     // Set to `true` or `false` to always turn it on or off
     bundleAnalyzerReport: process.env.npm_config_report
   },
+  // for express server and related configuration
   dev: {
     env: require('./dev.env'),
     port: 80,
     autoOpenBrowser: true,
-    assetsSubDirectory: 'static',
+    assetsSubDirectory: 'contents',
     assetsPublicPath: '/',
     proxyTable: {},
     // CSS Sourcemaps off by default because relative paths are "buggy"
