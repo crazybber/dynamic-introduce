@@ -162,7 +162,7 @@ html {
   methods: {
     makeResume: async function() {
       await this.progressivelyShowStyle(0);
-      await this.progressivelyShowResume();
+      await this.progressivelyShowContent();
       await this.progressivelyShowStyle(1);
       await this.showHtml();
       await this.progressivelyShowStyle(2);
@@ -204,7 +204,7 @@ html {
         showStyle();
       });
     },
-    progressivelyShowResume() {
+    progressivelyShowContent() {
       return new Promise((resolve, reject) => {
         let length = this.fullMarkdown.length;
         let interval = this.interval;

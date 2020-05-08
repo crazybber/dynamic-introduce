@@ -275,7 +275,7 @@ h3{
     dynamicShowing: async function() {
       await this.progressivelyShowStyle(0);
       this.interval = 0;
-      await this.progressivelyShowResume();
+      await this.progressivelyShowContent();
       this.interval = 10;
       await this.progressivelyShowStyle(1);
       await this.showHtml();
@@ -318,7 +318,7 @@ h3{
         showStyle();
       });
     },
-    progressivelyShowResume() {
+    progressivelyShowContent() {
       return new Promise((resolve, reject) => {
         let length = this.fullMarkdown.length; //这个值被提前计算了
         let interval = this.interval;
