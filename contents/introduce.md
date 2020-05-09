@@ -10,7 +10,9 @@ this is an introduce for site: arch.run
 * Wechat：crazybber;
 * Site: <https://arch.run>
 
-## 基本信息
+## Basic Info
+
+----
 
 * Name: <https://arch.run>
 * Education: Never had been to School;
@@ -49,3 +51,8 @@ this is an introduce for site: arch.run
 ----
 
 * [GitHub](https://github.com/crazybber)
+* [Gitee](https://gitee.com/crazybber)
+
+## More Content
+
+* [contents](./content.md)
