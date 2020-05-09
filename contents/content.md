@@ -13,10 +13,10 @@ this is an introduce for site: arch.run
 
 ## Angular
 
-[markdowncss](http://markdowncss.github.io/)
-[scully-kit](https://github.com/jorgeucano/started-scully-firebase)
-[scully DonutStore](https://github.com/nghoney/DonutStore)
-[scully site](d-koppenhagen.de)
+- [markdowncss](http://markdowncss.github.io/)
+- [scully-kit](https://github.com/jorgeucano/started-scully-firebase)
+- [scully DonutStore](https://github.com/nghoney/DonutStore)
+- [scully site](d-koppenhagen.de)
 
 
 ## Code Snips
