@@ -55,4 +55,6 @@ this is an introduce for site: arch.run
 
 ## More Content
 
+----
+
 * [contents](./content.md)
