@@ -34,3 +34,9 @@ npm run dev
 
 使用docs目录host站点
 ![use-docs-for-git-pages](./docs/use-docs-for-gitpages.png)
+
+
+## TODO 
+
+- [ ] [WIP]增加路由守卫，允许页面在不同的URL下，可以静态载入
+
