@@ -38,5 +38,7 @@ npm run dev
 
 ## TODO 
 
-- [ ] [WIP]增加路由守卫，允许页面在不同的URL下，可以静态载入
+- [x] 以Load远程Markdown的方式，直接载入内容，使得介绍部分可以单独修改，而不用重新编译
+- [ ] [WIP] 增加Action编译脚本，以Github Action自动化CI/CD.
+- [ ] [WIP]增加路由守卫，允许页面在不同的URL下，可以跳过动态阶段直接载入介绍页
 
