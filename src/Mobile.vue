@@ -18,6 +18,7 @@ export default {
   },
   data() {
     return {
+      quickLoad :false,
       interval: 15,
       currentStyle: "",
       enableHtml: false,
@@ -263,7 +264,7 @@ h3{
 
   props: {
     //这里收不到路由参数
-    quickLoad: {
+    quick: {
       type: Boolean,
       default: false
     },
@@ -274,15 +275,15 @@ h3{
   },
   created() {
     if (this.$route.path === "/q") {
-      this.$props.quickLoad = true;
+      this.quickLoad = true;
       this.interval = 0;
-      console.log("slinet", this.$props.silent);
+//      console.log("slinet", this.$props.silent);
     }
 
     //prepare content firstly
     this.loadMD().then(loaded => {
       if (loaded) {
-        this.dynamicShowing(this.$props.quickLoad);
+        this.dynamicShowing(this.quickLoad);
       }
     });
   },

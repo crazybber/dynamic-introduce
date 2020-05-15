@@ -12,7 +12,7 @@ const routes = [
     path: '/q',
     name: 'Quick',  //quick load without progressing
     component: App,
-    props: { quickLoad: true,silent:'keep' }
+    props: { quick: true, silent: 'keep' }
   }
 ]
 
