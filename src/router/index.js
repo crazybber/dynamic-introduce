@@ -1,21 +1,22 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
+import App from '../App'
+
 Vue.use(Router)
 
-export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'home',
-      component: Home,
-      meta:{
-        isLogin:true    // 添加该字段，表示进入这个路由是需要登录的
-      }//路由元
-    },{
-      path:"/login",
-      name:"login",
-      component:Login
-    }
-  ]
-})
+
+const routes = [
+  { path: '/', name: 'Default', component: App },
+  {
+    path: '/q',
+    name: 'Quick',  //quick load without progressing
+    component: App,
+    props: { quickLoad: true }
+  }
+]
+
+const router = new Router({ base: process.env.BASE_URL, routes })
+
+
+export default router

@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import Mobile from './Mobile'
+import router from './router'
+//var width = document.documentElement.clientWidth
 
-var width = document.documentElement.clientWidth
-/* eslint-disable no-new */
 new Vue({
-  el: '#app',
+  router,
   render: h => h(Mobile)
-})
+}).$mount('#app')

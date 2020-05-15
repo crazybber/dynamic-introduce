@@ -16,6 +16,12 @@ export default {
     StyleEditor,
     ResumeEditor
   },
+  props: {
+    quickLoad: {
+      type: Boolean,
+      default: false
+    }
+  },
   data() {
     return {
       interval: 20,
@@ -31,7 +37,8 @@ export default {
  */
 
 /*
- *  OK,Let's begin
+ *  OK,Let's begin,如果不想看到这个动态加载缓慢
+ *  在链接后面加一个q访问，即使用: http://arch.run/q 会屏蔽动态加载过程
  *  首先给所有元素加上过渡效果
  */
 * {
@@ -263,7 +270,7 @@ h3{
     //prepare content firstly
     this.loadMD().then(loaded => {
       if (loaded) {
-        this.dynamicShowing();
+        this.dynamicShowing(this.quickLoad);
       }
     });
   },
@@ -276,11 +283,11 @@ h3{
         return true;
       });
     },
-    dynamicShowing: async function() {
+    dynamicShowing: async function(quick) {
       await this.progressivelyShowStyle(0);
       this.interval = 0;
       await this.progressivelyShowContent();
-      this.interval = 10;
+      this.interval = 0;
       await this.progressivelyShowStyle(1);
       await this.showHtml();
       await this.progressivelyShowStyle(2);
