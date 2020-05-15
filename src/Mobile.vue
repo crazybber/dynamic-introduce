@@ -16,15 +16,9 @@ export default {
     StyleEditor,
     ResumeEditor
   },
-  props: {
-    quickLoad: {
-      type: Boolean,
-      default: false
-    }
-  },
   data() {
     return {
-      interval: 20,
+      interval: 15,
       currentStyle: "",
       enableHtml: false,
       fullStyle: [
@@ -38,7 +32,7 @@ export default {
 
 /*
  *  OK,Let's begin,如果不想看到这个动态加载缓慢
- *  在链接后面加一个q访问，即使用: http://arch.run/q 会屏蔽动态加载过程
+ *  在链接后面加一个q访问，即使用: http://arch.run/q 会快速载入
  *  首先给所有元素加上过渡效果
  */
 * {
@@ -266,7 +260,26 @@ h3{
       fullMarkdown: `loading...`
     };
   },
+
+  props: {
+    //这里收不到路由参数
+    quickLoad: {
+      type: Boolean,
+      default: false
+    },
+    silent: {
+      type: String,
+      default: "empty"
+    }
+  },
+
   created() {
+    if (this.$route.path == "/q") {
+      this.quickLoad = true;
+      this.interval = 0;
+      console.log("slinet", this.silent);
+    }
+
     //prepare content firstly
     this.loadMD().then(loaded => {
       if (loaded) {
@@ -283,14 +296,21 @@ h3{
         return true;
       });
     },
-    dynamicShowing: async function(quick) {
-      await this.progressivelyShowStyle(0);
+    dynamicShowing: async function(quickLoad) {
+      //加载第1部分CSS
+      await this.progressivelyShowStyle(0, this.interval);
+      this.interval = 10;
+      if (quickLoad) {
+        this.interval = 0;
+      }
+
+      await this.progressivelyShowContent(this.interval);
       this.interval = 0;
-      await this.progressivelyShowContent();
-      this.interval = 0;
-      await this.progressivelyShowStyle(1);
+      //加载第2部分CSS
+      await this.progressivelyShowStyle(1, this.interval);
       await this.showHtml();
-      await this.progressivelyShowStyle(2);
+      //加载第3部分CSS
+      await this.progressivelyShowStyle(2, this.interval);
     },
     showHtml: function() {
       return new Promise((resolve, reject) => {
@@ -298,9 +318,8 @@ h3{
         resolve();
       });
     },
-    progressivelyShowStyle(n) {
+    progressivelyShowStyle(n, intervalTime) {
       return new Promise((resolve, reject) => {
-        let interval = this.interval;
         let showStyle = async function() {
           let style = this.fullStyle[n];
           if (!style) {
@@ -321,7 +340,7 @@ h3{
                 this.$refs.styleEditor.goBottom();
               });
             }
-            setTimeout(showStyle, interval);
+            setTimeout(showStyle, intervalTime);
           } else {
             resolve();
           }
@@ -329,10 +348,9 @@ h3{
         showStyle();
       });
     },
-    progressivelyShowContent() {
+    progressivelyShowContent(intervalTime) {
       return new Promise((resolve, reject) => {
-        let length = this.fullMarkdown.length; //这个值被提前计算了
-        let interval = this.interval;
+        let length = this.fullMarkdown.length;
         let showResume = () => {
           if (this.currentMarkdown.length < length) {
             this.currentMarkdown = this.fullMarkdown.substring(
@@ -348,7 +366,7 @@ h3{
             if (prevChar === "\n" && this.$refs.resumeEditor) {
               this.$nextTick(() => this.$refs.resumeEditor.goBottom());
             }
-            setTimeout(showResume, interval);
+            setTimeout(showResume, intervalTime);
           } else {
             resolve();
           }
