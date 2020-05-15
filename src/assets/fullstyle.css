@@ -1,0 +1,140 @@
+/**
+* Everybody yo yo ,come let's go !
+* Hello，Everyone I'm arch.run.
+* this a demo just showing some content.
+* Framework: vue2.6+/webpack4+/babel7+
+* Author: arch.run
+*/
+
+/**
+ *  首先给所有元素加上过渡效果
+ */
+* {
+  transition: all 1s;
+  -webkit-transition: all 1s;
+}
+
+/**
+ * 白色背景太刺眼,我们来点背景
+ */
+html {
+  color: rgb(222, 222, 222);
+  height: 100%;
+  width: 100%;
+  /* Emmm.. It doesn't seem to fit me */
+  background: rgb(0, 43, 54);
+}
+
+/**
+ * ok,美化一下我们的工作区
+ */
+.style-div {
+  padding: 10px 10px 20px;
+  overflow: auto;
+  background: rgb(48, 48, 48);
+  color: white;
+  border: 1px solid #ccc;
+  width: 45%;
+  height: 90%;
+  font-size: 14px;
+  box-shadow: -4px 4px 2px 0 rgba(0, 0, 0, 0.3);
+}
+.style-div:hover {
+  box-shadow: 0px 0px 40px 5px rgba(255, 255, 255, 0.4);
+}
+
+/**
+ * 代码看着不舒服,加个高亮
+ */
+.token.comment {
+  color: #857f6b;
+  font-size: 12px;
+  font-style: italic;
+}
+.token.selector {
+  color: #e69f0f;
+}
+.token.property {
+  color: #64d5ea;
+}
+.token.punctuation {
+  color: #ddd;
+}
+.token.function {
+  color: #be84f2;
+}
+
+/**
+ * 加一些3D转换效果
+ */
+.style-div {
+  position: fixed;
+  left: 10px;
+  top: 10px;
+  transform: rotateY(10deg) translateZ(-100px);
+  -webkit-transform: rotateY(10deg) translateZ(-100px);
+}
+
+/**
+ * 改变一下可视角度
+ */
+html {
+  perspective: 1500px;
+  -webkit-perspective: 1500px;
+}
+
+/**
+ * Okey,我还需要一个填充内容的容器
+ */
+.resume-div {
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  padding: 10px;
+  margin: 10px;
+  width: 48%;
+  height: 90%;
+  border: 1px solid;
+  background: rgb(48, 48, 48);
+  color: white;
+  overflow: auto;
+  transform: rotateY(-10deg) translateZ(-100px);
+  -webkit-transform: rotateY(-10deg) translateZ(-100px);
+}
+
+/**
+ * 好，开始写内容
+ */
+
+/**
+ * 把 Markdown 格式转换成 HTML
+ */
+
+/**
+ * 我现在感觉Markdown格式更好看
+ * 对 HTML 加点样式
+ */
+.resume-div a {
+  color: wheat;
+}
+.resume-div h2 {
+  display: inline-block;
+  border-bottom: 1px solid;
+  margin: 20px 0 10px;
+}
+.resume-div ul,
+.resume-div ol {
+  list-style: none;
+}
+.resume-div ul > li::before {
+  content: "•";
+  margin-right: 10px;
+}
+.resume-div ul > li {
+  margin: 8px;
+}
+
+/**
+ * OK,LAST WORDS
+ * I JUST USE OTHER'S STYLES
+ */
