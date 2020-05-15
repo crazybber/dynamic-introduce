@@ -272,18 +272,17 @@ h3{
       default: "empty"
     }
   },
-
   created() {
-    if (this.$route.path == "/q") {
-      this.quickLoad = true;
+    if (this.$route.path === "/q") {
+      this.$props.quickLoad = true;
       this.interval = 0;
-      console.log("slinet", this.silent);
+      console.log("slinet", this.$props.silent);
     }
 
     //prepare content firstly
     this.loadMD().then(loaded => {
       if (loaded) {
-        this.dynamicShowing(this.quickLoad);
+        this.dynamicShowing(this.$props.quickLoad);
       }
     });
   },
