@@ -22,6 +22,8 @@ this is an introduce for site: arch.run
 - [vue项目中的三种路由的方式以及路由守卫](https://blog.csdn.net/qq_39603448/article/details/93591185)
 
 
+- [vue:created与mounted区别](https://segmentfault.com/a/1190000020058583?utm_source=tag-newest)
+
 
 ## Angular
 
