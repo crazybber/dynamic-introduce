@@ -6,9 +6,21 @@ this is an introduce for site: arch.run
 
 ----
 
-- [Links](https://www.cnblogs.com/ChineseLiao/p/11079080.html)
+- [vue展示md文件](https://www.cnblogs.com/ChineseLiao/p/11079080.html)
 - [vue中 devServer](https://blog.csdn.net/qq_42692714/article/details/105841434)
 - [Vue.js本地dev server和json-server模拟请求服务器](https://www.cnblogs.com/nx520zj/p/9617900.html)
+
+
+### 路由守卫
+
+- [vue路由守卫](https://www.jianshu.com/p/22c54f0830c9)
+- [vue路由传参与路由守卫](https://www.jianshu.com/p/077e770a982a)
+- [VUE中的路由守卫](https://router.vuejs.org/zh/guide/advanced/navigation-guards.html)
+- [Vue2.0完整生命周期（包括路由守卫）](https://www.jianshu.com/p/7ff8f31afebe)
+- [Vue中使用router全局守卫实现页面拦截](https://www.cnblogs.com/xufeikko/p/10169826.html)
+- [Vue 路由守卫及其在实际开发中的应用](https://blog.csdn.net/qq_26769677/article/details/101003337)
+- [vue项目中的三种路由的方式以及路由守卫](https://blog.csdn.net/qq_39603448/article/details/93591185)
+
 
 
 ## Angular
